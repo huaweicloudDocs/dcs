@@ -1,11 +1,11 @@
-# 连接Memcached实例<a name="ZH-CN_TOPIC_0082114845"></a>
+# 连接Memcached实例<a name="ZH-CN_TOPIC_0144197294"></a>
 
 任何兼容Memcached协议的客户端都可以连接Memcached实例。您可以根据自身应用特点选用合适的Memcached客户端。
 
-## 前提条件<a name="section14501642174811"></a>
+## 前提条件<a name="zh-cn_topic_0082114845_section14501642174811"></a>
 
 -   已成功申请Memcached实例，且状态为“运行中”。
--   使用Telnet客户端连接Memcached实例时，需要开启免密访问模式，若未开启请参考[开启Memcached实例的免密访问](开启Memcached实例的免密访问.md)。其他客户端密码模式和免密模式都支持。
+-   使用Telnet客户端连接Memcached实例时，需要开启免密访问模式，若未开启请参考[开启Memcached实例的免密访问](开启Memcached实例的免密访问.md#ZH-CN_TOPIC_0144197434)。其他客户端密码模式和免密模式都支持。
 -   已创建弹性云服务器，并已安装好客户端。创建弹性云服务器的方法，请参见《弹性云服务器用户指南》。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
@@ -17,20 +17,19 @@
 -   建议在使用本手册时删除示例代码中的所有注释信息。
 -   请确保所有命令行、代码块输入格式都是UTF-8，否则会出现编译出错或者运行失败的情况。
 
-## **Telnet客户端示例**<a name="section10709163710106"></a>
+## **Telnet客户端示例**<a name="zh-cn_topic_0082114845_section10709163710106"></a>
 
-Telnet客户端只支持连接免密访问模式下的Memcached实例，此时只支持二进制协议。若未开启请参考[开启Memcached实例的免密访问](开启Memcached实例的免密访问.md)。
+Telnet客户端只支持连接免密访问模式下的Memcached实例，此时只支持二进制协议。若未开启请参考[开启Memcached实例的免密访问](开启Memcached实例的免密访问.md#ZH-CN_TOPIC_0144197434)。
 
-1.  登录[管理控制台](https://console.huaweicloud.com/?locale=zh-cn)。
-2.  在管理控制台左上角单击![](figures/zh-cn_image_0095610286.gif)图标，选择区域和项目。
+1.  登录[分布式缓存服务管理控制台](https://console.huaweicloud.com/dcs)。
+2.  在管理控制台左上角单击![](figures/icon-region.png)，选择区域和项目。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
     >此处请选择与租户的应用服务相同的区域。  
 
-3.  单击页面上方的“服务列表”，选择“数据库 \> 分布式缓存服务”，进入分布式缓存服务信息页面。
-4.  单击左侧菜单栏的“缓存管理”，进入缓存实例信息页面。
-5.  <a name="li7304143"></a>单击需要使用的其中一个Memcached实例的名称，进入该Memcached实例的基本信息页面。查看并获取该Memcached实例的IP地址/域名和端口。
-6.  连接Memcached实例。
+3.  单击左侧菜单栏的“缓存管理”，进入缓存实例信息页面。
+4.  <a name="zh-cn_topic_0082114845_li7304143"></a>单击需要使用的其中一个Memcached实例的名称，进入该Memcached实例的基本信息页面。查看并获取该Memcached实例的IP地址/域名和端口。
+5.  连接Memcached实例。
     1.  登录已创建的弹性云服务器。
     2.  执行如下命令，确认是否已安装Telnet客户端。
 
@@ -45,7 +44,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
 
         _**telnet \{ip or domain name\} \{port\}**_
 
-        其中\{ip or domain name\} 为Memcached实例的IP地址/域名，\{port\}为Memcached实例的端口。IP地址/域名和端口获取方法请参考步骤[5](#li7304143)，请按实际情况修改后执行。
+        其中\{ip or domain name\} 为Memcached实例的IP地址/域名，\{port\}为Memcached实例的端口。IP地址/域名和端口获取方法请参考步骤[4](#zh-cn_topic_0082114845_li7304143)，请按实际情况修改后执行。
 
         界面提示如下表示连接缓存实例成功。
 
@@ -69,7 +68,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
 
 
 
-## **Java客户端示例**<a name="section39831643171118"></a>
+## **Java客户端示例**<a name="zh-cn_topic_0082114845_section39831643171118"></a>
 
 -   用户的弹性云服务器已安装好Java JDK和常用的IDE（如Eclipse）。
 -   已获取[spymemcached-x.y.z.jar](http://central.maven.org/maven2/net/spy/spymemcached)依赖包。
@@ -78,165 +77,163 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
     >其中x.y.z为依赖包的版本号，建议获取最新版本。  
 
 
-1.  <a name="li11825141112015"></a>获取Memcached实例的IP/域名和端口。
-    1.  登录[管理控制台](https://console.huaweicloud.com/?locale=zh-cn)。
-    2.  在管理控制台左上角单击![](figures/zh-cn_image_0095610286.gif)图标，选择区域和项目。
+1.  <a name="zh-cn_topic_0082114845_li11825141112015"></a>获取Memcached实例的IP/域名和端口。
+    1.  登录[分布式缓存服务管理控制台](https://console.huaweicloud.com/dcs)。
+    2.  在管理控制台左上角单击![](figures/icon-region.png)，选择区域和项目。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
         >此处请选择与租户的应用服务相同的区域。  
 
-    3.  单击页面上方的“服务列表”，选择“数据库 \> 分布式缓存服务”，进入分布式缓存服务信息页面。
-    4.  单击左侧菜单栏的“缓存管理”，进入缓存实例信息页面。
-    5.  单击需要使用的其中一个Memcached实例的名称，进入该Memcached实例的基本信息页面。查看并获取该Memcached实例的IP地址/域名和端口。
+    3.  单击左侧菜单栏的“缓存管理”，进入缓存实例信息页面。
+    4.  单击需要使用的其中一个Memcached实例的名称，进入该Memcached实例的基本信息页面。查看并获取该Memcached实例的IP地址/域名和端口。
 
 2.  将已获取的spymemcached-x.y.z.jar依赖包上传到已创建的弹性云服务器。
 3.  登录弹性云服务器。
 4.  在Eclipse中创建一个Java工程，并将spymemcached-x.y.z.jar依赖包导入，工程名可自定义。
 5.  新建一个ConnectMemcached1类，将如下Java代码复制到类中并修改代码。
-
     -   密码模式代码示例
 
-        其中ip or domain name:port需要修改为[1](#li11825141112015)获取的Memcached实例IP地址/域名和端口。userName和password需要修改为Memcached实例的用户名和密码。
+        其中ip or domain name:port需要修改为[1](#zh-cn_topic_0082114845_li11825141112015)获取的Memcached实例IP地址/域名和端口。userName和password需要修改为Memcached实例的用户名和密码。
 
-
-    ```
-    //java 连接加密的Memcached代码
-    import java.io.IOException;
-    import java.util.concurrent.ExecutionException;
-    
-    import net.spy.memcached.AddrUtil;
-    import net.spy.memcached.ConnectionFactoryBuilder;
-    import net.spy.memcached.ConnectionFactoryBuilder.Protocol;
-    import net.spy.memcached.MemcachedClient;
-    import net.spy.memcached.auth.AuthDescriptor;
-    import net.spy.memcached.auth.PlainCallbackHandler;
-    import net.spy.memcached.internal.OperationFuture;
-    
-    public class ConnectMemcached1
-    {
-        public static void main(String[] args)
+        ```
+        //java 连接加密的Memcached代码
+        import java.io.IOException;
+        import java.util.concurrent.ExecutionException;
+        
+        import net.spy.memcached.AddrUtil;
+        import net.spy.memcached.ConnectionFactoryBuilder;
+        import net.spy.memcached.ConnectionFactoryBuilder.Protocol;
+        import net.spy.memcached.MemcachedClient;
+        import net.spy.memcached.auth.AuthDescriptor;
+        import net.spy.memcached.auth.PlainCallbackHandler;
+        import net.spy.memcached.internal.OperationFuture;
+        
+        public class ConnectMemcached1
         {
-            final String connectionaddress = "ip or domain name:port"; 
-            final String username = "userName";//用户名
-            final String password = "password";//密码
-            MemcachedClient client = null;
-            try
+            public static void main(String[] args)
             {
-                AuthDescriptor authDescriptor =
-                    new AuthDescriptor(new String[] {"PLAIN"}, new PlainCallbackHandler(username,
-                            password));
-                client = new MemcachedClient(
-                        new ConnectionFactoryBuilder().setProtocol(Protocol.BINARY)
-                                .setAuthDescriptor(authDescriptor)
-                                .build(),
-                        AddrUtil.getAddresses(connectionaddress));
-                String key = "memcached";//向Memcached中存一个key为"memcached"的数据
-                String value = "Hello World";//value为Hello World
-                int expireTime = 5; // 过期时间，单位s; 从写入时刻开始计时，超过expireTime s后，该数据过期失效，无法再读出；
-                doExcute(client, key, value, expireTime);//执行操作
+                final String connectionaddress = "ip or domain name:port"; 
+                final String username = "userName";//用户名
+                final String password = "password";//密码
+                MemcachedClient client = null;
+                try
+                {
+                    AuthDescriptor authDescriptor =
+                        new AuthDescriptor(new String[] {"PLAIN"}, new PlainCallbackHandler(username,
+                                password));
+                    client = new MemcachedClient(
+                            new ConnectionFactoryBuilder().setProtocol(Protocol.BINARY)
+                                    .setAuthDescriptor(authDescriptor)
+                                    .build(),
+                            AddrUtil.getAddresses(connectionaddress));
+                    String key = "memcached";//向Memcached中存一个key为"memcached"的数据
+                    String value = "Hello World";//value为Hello World
+                    int expireTime = 5; // 过期时间，单位s; 从写入时刻开始计时，超过expireTime s后，该数据过期失效，无法再读出；
+                    doExcute(client, key, value, expireTime);//执行操作
+                }
+                catch (IOException e)
+                {
+                    e.printStackTrace();
+                }
             }
-            catch (IOException e)
+        
+            /**
+             *向Memcached写数据方法
+             */
+            private static void doExcute(MemcachedClient client, String key, String value, int expireTime)
             {
-                e.printStackTrace();
+                try
+                {
+                    OperationFuture<Boolean> future = client.set(key, expireTime, value);
+                    future.get();// spymemcached set()是异步的，future.get() 等待cache.set()操作结束，也可以不等待，用户根据自己需求选择;
+                    System.out.println("Set操作成功");
+                    System.out.println("Get操作:" + client.get(key));
+                    Thread.sleep(6000);//等待6000毫秒，即6秒，该数据将会过期失效，无法再读出
+                    System.out.println("6秒后再执行Get操作:" + client.get(key));
+        
+                }
+                catch (InterruptedException e)
+                {
+                    e.printStackTrace();
+                }
+                catch (ExecutionException e)
+                {
+                    e.printStackTrace();
+                }
+                if (client != null)
+                {
+                    client.shutdown();
+                }
             }
         }
-    
-        /**
-         *向Memcached写数据方法
-         */
-        private static void doExcute(MemcachedClient client, String key, String value, int expireTime)
-        {
-            try
-            {
-                OperationFuture<Boolean> future = client.set(key, expireTime, value);
-                future.get();// spymemcached set()是异步的，future.get() 等待cache.set()操作结束，也可以不等待，用户根据自己需求选择;
-                System.out.println("Set操作成功");
-                System.out.println("Get操作:" + client.get(key));
-                Thread.sleep(6000);//等待6000毫秒，即6秒，该数据将会过期失效，无法再读出
-                System.out.println("6秒后再执行Get操作:" + client.get(key));
-    
-            }
-            catch (InterruptedException e)
-            {
-                e.printStackTrace();
-            }
-            catch (ExecutionException e)
-            {
-                e.printStackTrace();
-            }
-            if (client != null)
-            {
-                client.shutdown();
-            }
-        }
-    }
-    ```
+        ```
+
 
     -   免密模式代码示例
 
-        其中ip or domain name:port需要修改为[1](#li11825141112015)获取的Memcached实例IP地址/域名和端口。
+        其中ip or domain name:port需要修改为[1](#zh-cn_topic_0082114845_li11825141112015)获取的Memcached实例IP地址/域名和端口。
 
-
-    ```
-    //java 连接免密的Memcached代码
-    import java.io.IOException;
-    import java.util.concurrent.ExecutionException;
-    
-    import net.spy.memcached.AddrUtil;
-    import net.spy.memcached.BinaryConnectionFactory;
-    import net.spy.memcached.MemcachedClient;
-    import net.spy.memcached.internal.OperationFuture;
-    
-    public class ConnectMemcached
-    {
-        public static void main(String[] args)
+        ```
+        //java 连接免密的Memcached代码
+        import java.io.IOException;
+        import java.util.concurrent.ExecutionException;
+        
+        import net.spy.memcached.AddrUtil;
+        import net.spy.memcached.BinaryConnectionFactory;
+        import net.spy.memcached.MemcachedClient;
+        import net.spy.memcached.internal.OperationFuture;
+        
+        public class ConnectMemcached
         {
-            final String connectionaddress = "ip or domain name:port"; 
-            MemcachedClient client = null;
-            try
+            public static void main(String[] args)
             {
-                client = new MemcachedClient(new BinaryConnectionFactory(), AddrUtil.getAddresses(connectionaddress));
-                String key = "memcached";//向Memcached中存一个key为"memcached"的数据
-                String value = "Hello World";//value为Hello World
-                int expireTime = 5; // 过期时间，单位s; 从写入时刻开始计时，超过 expireTime s后，该数据过期失效，无法再读出；
-                doExcute(client, key, value, expireTime);//执行操作
+                final String connectionaddress = "ip or domain name:port"; 
+                MemcachedClient client = null;
+                try
+                {
+                    client = new MemcachedClient(new BinaryConnectionFactory(), AddrUtil.getAddresses(connectionaddress));
+                    String key = "memcached";//向Memcached中存一个key为"memcached"的数据
+                    String value = "Hello World";//value为Hello World
+                    int expireTime = 5; // 过期时间，单位s; 从写入时刻开始计时，超过 expireTime s后，该数据过期失效，无法再读出；
+                    doExcute(client, key, value, expireTime);//执行操作
+                }
+                catch (IOException e)
+                {
+                    e.printStackTrace();
+                }
             }
-            catch (IOException e)
+        
+            /**
+             *向Memcached写数据方法
+             */
+            private static void doExcute(MemcachedClient client, String key, String value, int expireTime)
             {
-                e.printStackTrace();
+                try
+                {
+                    OperationFuture<Boolean> future = client.set(key, expireTime, value);
+                    future.get();// spymemcached set()是异步的，future.get() 等待cache.set()操作结束，也可以不等待，用户根据自己需求选择;
+                    System.out.println("Set操作成功");
+                    System.out.println("Get操作:" + client.get(key));
+                    Thread.sleep(6000);//等待6000毫秒，即6秒，该数据将会过期失效，无法再读出
+                    System.out.println("6秒后再执行Get操作:" + client.get(key));
+        
+                }
+                catch (InterruptedException e)
+                {
+                    e.printStackTrace();
+                }
+                catch (ExecutionException e)
+                {
+                    e.printStackTrace();
+                }
+                if (client != null)
+                {
+                    client.shutdown();
+                }
             }
         }
-    
-        /**
-         *向Memcached写数据方法
-         */
-        private static void doExcute(MemcachedClient client, String key, String value, int expireTime)
-        {
-            try
-            {
-                OperationFuture<Boolean> future = client.set(key, expireTime, value);
-                future.get();// spymemcached set()是异步的，future.get() 等待cache.set()操作结束，也可以不等待，用户根据自己需求选择;
-                System.out.println("Set操作成功");
-                System.out.println("Get操作:" + client.get(key));
-                Thread.sleep(6000);//等待6000毫秒，即6秒，该数据将会过期失效，无法再读出
-                System.out.println("6秒后再执行Get操作:" + client.get(key));
-    
-            }
-            catch (InterruptedException e)
-            {
-                e.printStackTrace();
-            }
-            catch (ExecutionException e)
-            {
-                e.printStackTrace();
-            }
-            if (client != null)
-            {
-                client.shutdown();
-            }
-        }
-    }
-    ```
+        ```
+
 
 6.  运行main方法，在Eclipse下的Console窗口可以看到如下结果。
 
@@ -247,7 +244,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
     ```
 
 
-## **Python客户端示例**<a name="section16774173023520"></a>
+## **Python客户端示例**<a name="zh-cn_topic_0082114845_section16774173023520"></a>
 
 -   用户的弹性云服务器已安装好Python，建议为2.7.6或更高版本。
 -   已获取[<u>python-binary-memcached-x.y.z.zip</u>](https://github.com/jaysonsantos/python-binary-memcached/releases)依赖包。
@@ -256,16 +253,15 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
     >其中x.y.z为依赖包的版本号，建议获取最新版本。  
 
 
-1.  <a name="li122821753153715"></a>获取Memcached实例的IP地址/域名和端口。
-    1.  登录[管理控制台](https://console.huaweicloud.com/?locale=zh-cn)。
-    2.  在管理控制台左上角单击![](figures/zh-cn_image_0095610286.gif)图标，选择区域和项目。
+1.  <a name="zh-cn_topic_0082114845_li122821753153715"></a>获取Memcached实例的IP地址/域名和端口。
+    1.  登录[分布式缓存服务管理控制台](https://console.huaweicloud.com/dcs)。
+    2.  在管理控制台左上角单击![](figures/icon-region.png)，选择区域和项目。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
         >此处请选择与租户的应用服务相同的区域。  
 
-    3.  单击页面上方的“服务列表”，选择“数据库 \> 分布式缓存服务”，进入分布式缓存服务信息页面。
-    4.  单击左侧菜单栏的“缓存管理”，进入缓存实例信息页面。
-    5.  单击需要使用的其中一个Memcached实例的名称，进入该Memcached实例的基本信息页面。查看并获取该Memcached实例的IP地址/域名和端口。
+    3.  单击左侧菜单栏的“缓存管理”，进入缓存实例信息页面。
+    4.  单击需要使用的其中一个Memcached实例的名称，进入该Memcached实例的基本信息页面。查看并获取该Memcached实例的IP地址/域名和端口。
 
 2.  将已获取的python-binary-memcached-x.y.z.zip依赖包上传到已创建的弹性云服务器，假设下载得到的包名为python-binary-memcached-x.y.z.zip。
 3.  登录弹性云服务器。
@@ -285,7 +281,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
 5.  新建Python文件如dcs\_test.py，将如下Python代码复制到dcs\_test.py文件并修改代码。
     -   密码模式代码示例
 
-        其中ip or domain name:port需要修改为[1](#li122821753153715)获取的Memcached实例IP地址/域名和端口。userName和password需要修改为Memcached实例的用户名和密码。
+        其中ip or domain name:port需要修改为[1](#zh-cn_topic_0082114845_li122821753153715)获取的Memcached实例IP地址/域名和端口。userName和password需要修改为Memcached实例的用户名和密码。
 
         ```
         import bmemcached
@@ -298,7 +294,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
 
     -   免密模式代码示例
 
-        其中ip or domain name:port需要修改为[1](#li122821753153715)获取的Memcached实例IP地址/域名和端口。
+        其中ip or domain name:port需要修改为[1](#zh-cn_topic_0082114845_li122821753153715)获取的Memcached实例IP地址/域名和端口。
 
         ```
         import bmemcached
@@ -321,7 +317,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
     ```
 
 
-## **C++客户端示例**<a name="section15431539195717"></a>
+## **C++客户端示例**<a name="zh-cn_topic_0082114845_section15431539195717"></a>
 
 -   用户的弹性云服务器已安装好GCC，建议为4.8.4或更高版本。
 -   已获取[l](https://launchpad.net/libmemcached/+download)[ibmemcached-x.y.z.tar.gz](https://launchpad.net/libmemcached/+download)依赖包。
@@ -330,16 +326,15 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
     >其中x.y.z为依赖包的版本号，建议获取最新版本。  
 
 
-1.  <a name="li134451239105715"></a>获取Memcached实例的IP地址/域名和端口。
-    1.  登录[管理控制台](https://console.huaweicloud.com/?locale=zh-cn)。
-    2.  在管理控制台左上角单击![](figures/zh-cn_image_0095610286.gif)图标，选择区域和项目。
+1.  <a name="zh-cn_topic_0082114845_li134451239105715"></a>获取Memcached实例的IP地址/域名和端口。
+    1.  登录[分布式缓存服务管理控制台](https://console.huaweicloud.com/dcs)。
+    2.  在管理控制台左上角单击![](figures/icon-region.png)，选择区域和项目。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
         >此处请选择与租户的应用服务相同的区域。  
 
-    3.  单击页面上方的“服务列表”，选择“数据库 \> 分布式缓存服务”，进入分布式缓存服务信息页面。
-    4.  单击左侧菜单栏的“缓存管理”，进入缓存实例信息页面。
-    5.  单击需要使用的其中一个Memcached实例的名称，进入该Memcached实例的基本信息页面。查看并获取该Memcached实例的IP地址/域名和端口。
+    3.  单击左侧菜单栏的“缓存管理”，进入缓存实例信息页面。
+    4.  单击需要使用的其中一个Memcached实例的名称，进入该Memcached实例的基本信息页面。查看并获取该Memcached实例的IP地址/域名和端口。
 
 2.  将已获取的libmemcached-x.y.z.tar.gz依赖包上传到已创建的弹性云服务器。
 3.  登录弹性云服务器。
@@ -373,7 +368,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
 7.  新建dcs\_sample.cpp文件，将如下C++代码复制到dcs\_sample.cpp文件并修改代码。
     -   密码模式代码示例
 
-        其中ip or domain name和port需要修改为[1](#li134451239105715)获取的Memcached实例IP地址/域名和端口。userName和password需要修改为Memcached实例的用户名和密码。
+        其中ip or domain name和port需要修改为[1](#zh-cn_topic_0082114845_li134451239105715)获取的Memcached实例IP地址/域名和端口。userName和password需要修改为Memcached实例的用户名和密码。
 
         ```
         #include <iostream>
@@ -428,7 +423,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
 
     -   免密模式代码示例
 
-        其中ip or domain name和port需要修改为[1](#li134451239105715)获取的Memcached实例IP地址/域名和端口。
+        其中ip or domain name和port需要修改为[1](#zh-cn_topic_0082114845_li134451239105715)获取的Memcached实例IP地址/域名和端口。
 
         ```
         #include <iostream>
@@ -495,7 +490,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
     ```
 
 
-## PHP客户端<a name="section16569161111543"></a>
+## PHP客户端<a name="zh-cn_topic_0082114845_section16569161111543"></a>
 
 **RedHat系列**：
 
@@ -559,7 +554,8 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
     memcached.use_sasl = 1
     ```
 
-    ![](figures/zh-cn_image_0113249513.png)
+    **图 1**  增加php.ini配置<a name="zh-cn_topic_0082114845_fig19586203114111"></a>  
+    ![](figures/增加php-ini配置.png "增加php-ini配置")
 
 7.  测试连接。
 
@@ -678,7 +674,8 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
     memcached.use_sasl = 1
     ```
 
-    ![](figures/zh-cn_image_0113457260.png)
+    **图 2**  增加pdo.ini配置<a name="zh-cn_topic_0082114845_fig811317524210"></a>  
+    ![](figures/增加pdo-ini配置.png "增加pdo-ini配置")
 
 7.  测试连接。
 
@@ -708,25 +705,25 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
     ```
 
 
-## 相关产品及文档<a name="section9775204424615"></a>
+## 相关产品及文档<a name="zh-cn_topic_0082114845_section9775204424615"></a>
 
-<a name="zh-cn_topic_0046844820_table1073594361220"></a>
-<table><thead align="left"><tr id="zh-cn_topic_0046844820_row197372430123"><th class="cellrowborder" valign="top" width="50%" id="mcps1.1.3.1.1"><p id="zh-cn_topic_0046844820_p4737243111216"><a name="zh-cn_topic_0046844820_p4737243111216"></a><a name="zh-cn_topic_0046844820_p4737243111216"></a>相关产品</p>
+<a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_table1073594361220"></a>
+<table><thead align="left"><tr id="zh-cn_topic_0082114845_zh-cn_topic_0046844820_row197372430123"><th class="cellrowborder" valign="top" width="50%" id="mcps1.1.3.1.1"><p id="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p4737243111216"><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p4737243111216"></a><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p4737243111216"></a>相关产品</p>
 </th>
-<th class="cellrowborder" valign="top" width="50%" id="mcps1.1.3.1.2"><p id="zh-cn_topic_0046844820_p18737144301214"><a name="zh-cn_topic_0046844820_p18737144301214"></a><a name="zh-cn_topic_0046844820_p18737144301214"></a>相关文档</p>
+<th class="cellrowborder" valign="top" width="50%" id="mcps1.1.3.1.2"><p id="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p18737144301214"><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p18737144301214"></a><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p18737144301214"></a>相关文档</p>
 </th>
 </tr>
 </thead>
-<tbody><tr id="zh-cn_topic_0046844820_row17371443131210"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0046844820_p13372054101419"><a name="zh-cn_topic_0046844820_p13372054101419"></a><a name="zh-cn_topic_0046844820_p13372054101419"></a><a href="https://www.huaweicloud.com/product/dcs.html?infodocbz" target="_blank" rel="noopener noreferrer">分布式缓存 Redis</a></p>
-<p id="zh-cn_topic_0046844820_p19548105714519"><a name="zh-cn_topic_0046844820_p19548105714519"></a><a name="zh-cn_topic_0046844820_p19548105714519"></a><a href="https://www.huaweicloud.com/product/dcsmem.html?infodocbz" target="_blank" rel="noopener noreferrer">分布式缓存 Memcached</a></p>
-<p id="zh-cn_topic_0046844820_p8862161219564"><a name="zh-cn_topic_0046844820_p8862161219564"></a><a name="zh-cn_topic_0046844820_p8862161219564"></a><a href="https://www.huaweicloud.com/product/ecs.html?infodocbz" target="_blank" rel="noopener noreferrer">弹性云服务器 ECS</a></p>
-<p id="zh-cn_topic_0046844820_p841193941416"><a name="zh-cn_topic_0046844820_p841193941416"></a><a name="zh-cn_topic_0046844820_p841193941416"></a><a href="http://www.huaweicloud.com/product/vpc.html?infodocbz" target="_blank" rel="noopener noreferrer">虚拟私有云 VPC</a></p>
+<tbody><tr id="zh-cn_topic_0082114845_zh-cn_topic_0046844820_row17371443131210"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p13372054101419"><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p13372054101419"></a><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p13372054101419"></a><a href="https://www.huaweicloud.com/product/dcs.html?infodocbz" target="_blank" rel="noopener noreferrer">分布式缓存 Redis</a></p>
+<p id="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p19548105714519"><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p19548105714519"></a><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p19548105714519"></a><a href="https://www.huaweicloud.com/product/dcsmem.html?infodocbz" target="_blank" rel="noopener noreferrer">分布式缓存 Memcached</a></p>
+<p id="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p8862161219564"><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p8862161219564"></a><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p8862161219564"></a><a href="https://www.huaweicloud.com/product/ecs.html?infodocbz" target="_blank" rel="noopener noreferrer">弹性云服务器 ECS</a></p>
+<p id="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p841193941416"><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p841193941416"></a><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p841193941416"></a><a href="http://www.huaweicloud.com/product/vpc.html?infodocbz" target="_blank" rel="noopener noreferrer">虚拟私有云 VPC</a></p>
 </td>
-<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0046844820_p1381695711471"><a name="zh-cn_topic_0046844820_p1381695711471"></a><a name="zh-cn_topic_0046844820_p1381695711471"></a><a href="https://support.huaweicloud.com/usermanual-dcs/dcs-zh-ug-180315001.html?infodocbz" target="_blank" rel="noopener noreferrer">购买Redis实例</a></p>
-<p id="zh-cn_topic_0046844820_p682916370595"><a name="zh-cn_topic_0046844820_p682916370595"></a><a name="zh-cn_topic_0046844820_p682916370595"></a><a href="https://support.huaweicloud.com/usermanual-dcs/zh-cn_topic_0082114847.html?infodocbz" target="_blank" rel="noopener noreferrer">连接Redis实例</a></p>
-<p id="zh-cn_topic_0046844820_p16726748155912"><a name="zh-cn_topic_0046844820_p16726748155912"></a><a name="zh-cn_topic_0046844820_p16726748155912"></a><a href="https://support.huaweicloud.com/usermanual-dcs/zh-cn_topic_0061845451.html?infodocbz" target="_blank" rel="noopener noreferrer">缓存实例扩容</a></p>
-<p id="zh-cn_topic_0046844820_p12250886517"><a name="zh-cn_topic_0046844820_p12250886517"></a><a name="zh-cn_topic_0046844820_p12250886517"></a><a href="https://support.huaweicloud.com/usermanual-dcs/zh-cn_topic_0079545637.html?infodocbz" target="_blank" rel="noopener noreferrer">缓存实例备份恢复</a></p>
-<p id="zh-cn_topic_0046844820_p143616360517"><a name="zh-cn_topic_0046844820_p143616360517"></a><a name="zh-cn_topic_0046844820_p143616360517"></a><a href="https://support.huaweicloud.com/migration-dcs/zh-cn_topic_0078784423.html?infodocbz" target="_blank" rel="noopener noreferrer">缓存实例数据迁移</a></p>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p1381695711471"><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p1381695711471"></a><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p1381695711471"></a><a href="https://support.huaweicloud.com/usermanual-dcs/dcs-zh-ug-180315001.html?infodocbz" target="_blank" rel="noopener noreferrer">购买Redis实例</a></p>
+<p id="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p682916370595"><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p682916370595"></a><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p682916370595"></a><a href="https://support.huaweicloud.com/usermanual-dcs/zh-cn_topic_0082114847.html?infodocbz" target="_blank" rel="noopener noreferrer">连接Redis实例</a></p>
+<p id="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p16726748155912"><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p16726748155912"></a><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p16726748155912"></a><a href="https://support.huaweicloud.com/usermanual-dcs/zh-cn_topic_0061845451.html?infodocbz" target="_blank" rel="noopener noreferrer">变更缓存实例规格</a></p>
+<p id="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p12250886517"><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p12250886517"></a><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p12250886517"></a><a href="https://support.huaweicloud.com/usermanual-dcs/zh-cn_topic_0079545637.html?infodocbz" target="_blank" rel="noopener noreferrer">缓存实例备份恢复</a></p>
+<p id="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p143616360517"><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p143616360517"></a><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p143616360517"></a><a href="https://support.huaweicloud.com/migration-dcs/zh-cn_topic_0078784423.html?infodocbz" target="_blank" rel="noopener noreferrer">缓存实例数据迁移</a></p>
 </td>
 </tr>
 </tbody>

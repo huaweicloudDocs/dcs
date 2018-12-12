@@ -1,4 +1,4 @@
-# 通过WebCli连接DCS2.0 Redis实例<a name="ZH-CN_TOPIC_0144197386"></a>
+# 通过WebCli连接Redis 4.x实例<a name="ZH-CN_TOPIC_0144197386"></a>
 
 DCS支持通过管理控制台的WebCli功能连接DCS2.0 Redis实例。只有DCS2.0 Redis实例支持该操作。
 
@@ -7,7 +7,7 @@ DCS支持通过管理控制台的WebCli功能连接DCS2.0 Redis实例。只有DC
 
 ## 前提条件<a name="zh-cn_topic_0121496999_section46727122"></a>
 
-只有当DCS2.0 Redis实例处于“运行中”状态，才能执行此操作。
+只有当Redis 4.x实例处于“运行中”状态，才能执行此操作。
 
 ## 操作步骤<a name="zh-cn_topic_0121496999_section321623193712"></a>
 
@@ -22,7 +22,7 @@ DCS支持通过管理控制台的WebCli功能连接DCS2.0 Redis实例。只有DC
     **图 1**  进入WebCli登录界面<a name="zh-cn_topic_0121496999_fig653622219616"></a>  
     ![](figures/进入WebCli登录界面.jpg "进入WebCli登录界面")
 
-4.  输入DCS2.0 Redis实例的密码进入WebCli，然后选择当前操作的Redis数据库，在命令输入框输入Redis命令，按Enter键执行。
+4.  输入实例的密码进入WebCli，然后选择当前操作的Redis数据库，在命令输入框输入Redis命令，按Enter键执行。
 
 ## 相关产品及文档<a name="zh-cn_topic_0121496999_section152613113129"></a>
 

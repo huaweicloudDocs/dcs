@@ -26,7 +26,7 @@
         -   [公网连接Redis实例](公网连接Redis实例.md)
         -   [连接Memcached实例](连接Memcached实例.md)
         -   [连接IMDG实例](连接IMDG实例.md)
-        -   [通过WebCli连接DCS2.0 Redis实例](通过WebCli连接DCS2-0-Redis实例.md)
+        -   [通过WebCli连接DCS2.0Redis实例](通过WebCli连接DCS2-0-Redis实例.md)
 
     -   [查看缓存实例信息](查看缓存实例信息.md)
 

@@ -19,7 +19,7 @@ REST API请求/响应对可以分为如下部分：
 
 **\{URI-scheme\} :// \{**Endpoint**\} / \{resource-path\} ? \{query-string\}**
 
-尽管请求URI包含在请求消息头中，但大多数语言或框架都要求您从请求消息中单独传递它，所有在此单独拿出来强调。
+尽管请求URI包含在请求消息头中，但大多数语言或框架都要求您从请求消息中单独传递它，所以在此单独描述。
 
 **表 1**  URI中的参数说明
 
@@ -102,7 +102,7 @@ HTTP方法（也称为操作或动词），它告诉服务你正在请求什么�
 
 ## 请求消息头<a name="section1454211155819"></a>
 
-可选的附加请求头字段，如指定的URI和HTTP方法所要求的字段。详细的公共请求消息头字段请参见[表3](#t24b12299374a4f4ba9fbf5880aec2658)，其中请求认证信息根据认证方式请参见[Token认证](获取请求认证.md#section2417768214391)。 
+可选的附加请求头字段，如指定的URI和HTTP方法所要求的字段。详细的公共请求消息头字段请参见[表3](#t24b12299374a4f4ba9fbf5880aec2658)，其中请求认证信息根据认证方式请参见[Token认证](Token认证.md)或[AK/SK认证](AK-SK认证.md)。 
 
 **表 3**  公共请求消息头
 
@@ -129,11 +129,53 @@ HTTP方法（也称为操作或动词），它告诉服务你正在请求什么�
 <tr id="r48b466a7608e4d6eb042a35f56cbdfb8"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0035614236_p792363911913"><a name="zh-cn_topic_0035614236_p792363911913"></a><a name="zh-cn_topic_0035614236_p792363911913"></a>X-Auth-Token</p>
 </td>
 <td class="cellrowborder" valign="top" width="23%" headers="mcps1.2.5.1.2 "><p id="p3237430121524"><a name="p3237430121524"></a><a name="p3237430121524"></a>Token认证信息，通</p>
-<p id="p2293325721524"><a name="p2293325721524"></a><a name="p2293325721524"></a>过<a href="获取请求认证.md#section2417768214391">Token认证</a>获取。</p>
+<p id="p2293325721524"><a name="p2293325721524"></a><a name="p2293325721524"></a>过<a href="Token认证.md">Token认证</a>获取。</p>
 </td>
 <td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.3 "><p id="a1f6108d2189d4cd09376eebef87bb335"><a name="a1f6108d2189d4cd09376eebef87bb335"></a><a name="a1f6108d2189d4cd09376eebef87bb335"></a>当使用Token方式认证时，必须填充该字段。</p>
 </td>
 <td class="cellrowborder" valign="top" width="34%" headers="mcps1.2.5.1.4 "><p id="a993f118dde7d4c2f9164d578e9bc8c13"><a name="a993f118dde7d4c2f9164d578e9bc8c13"></a><a name="a993f118dde7d4c2f9164d578e9bc8c13"></a>-</p>
+</td>
+</tr>
+<tr id="r0a259195cce44cee955af0a771a20d71"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.2.5.1.1 "><p id="a4259b0099d3e432f88928e25c01d1127"><a name="a4259b0099d3e432f88928e25c01d1127"></a><a name="a4259b0099d3e432f88928e25c01d1127"></a>X-Sdk-Date</p>
+</td>
+<td class="cellrowborder" valign="top" width="23%" headers="mcps1.2.5.1.2 "><p id="abe5e383ccc8543c2aa4563830f67957a"><a name="abe5e383ccc8543c2aa4563830f67957a"></a><a name="abe5e383ccc8543c2aa4563830f67957a"></a>请求发送的时间。</p>
+</td>
+<td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.3 "><p id="p1309136221732"><a name="p1309136221732"></a><a name="p1309136221732"></a>当使用AK/SK认证时，必须填该字段。</p>
+</td>
+<td class="cellrowborder" valign="top" width="34%" headers="mcps1.2.5.1.4 "><p id="a0f19b458af404df982f0dbb457a13925"><a name="a0f19b458af404df982f0dbb457a13925"></a><a name="a0f19b458af404df982f0dbb457a13925"></a>20151222T034042Z</p>
+</td>
+</tr>
+<tr id="rc97d5ad8e26a47d9aadce68591dbbe62"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.2.5.1.1 "><p id="a7238e21480a841c7a1cbbbb21bdfc864"><a name="a7238e21480a841c7a1cbbbb21bdfc864"></a><a name="a7238e21480a841c7a1cbbbb21bdfc864"></a>Authorization</p>
+</td>
+<td class="cellrowborder" valign="top" width="23%" headers="mcps1.2.5.1.2 "><p id="p952592421823"><a name="p952592421823"></a><a name="p952592421823"></a>签名认证信息，该值来源于请求签名结果。</p>
+</td>
+<td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.3 "><p id="p865747321840"><a name="p865747321840"></a><a name="p865747321840"></a>当使用AK/SK认证时，必须填该字段。</p>
+</td>
+<td class="cellrowborder" valign="top" width="34%" headers="mcps1.2.5.1.4 "><p id="p608112012194"><a name="p608112012194"></a><a name="p608112012194"></a>SDK-HMACSHA256</p>
+<p id="p104299002194"><a name="p104299002194"></a><a name="p104299002194"></a>Credential=ZIRRKMTWPTQFQI1WKNKB/20151222/cnnorth-1/ec2/sdk_request,SignedHeaders=con</p>
+<p id="p202219192194"><a name="p202219192194"></a><a name="p202219192194"></a>nection;contenttype;host;x-sdk-date,Signature=7972cc9145876d174b386218</p>
+<p id="p17922872194"><a name="p17922872194"></a><a name="p17922872194"></a>8a0f61819431fa71c8a8a060809ea8b898</p>
+<p id="p109575352194"><a name="p109575352194"></a><a name="p109575352194"></a>e3eaa9</p>
+<p id="p315089562194"><a name="p315089562194"></a><a name="p315089562194"></a>Host:dcs.cn-north-1.myhuaweicloud.com</p>
+<p id="p20886442194"><a name="p20886442194"></a><a name="p20886442194"></a></p>
+</td>
+</tr>
+<tr id="row1781273623910"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.2.5.1.1 "><p id="p11533145922512"><a name="p11533145922512"></a><a name="p11533145922512"></a>X-Project-ID</p>
+</td>
+<td class="cellrowborder" valign="top" width="23%" headers="mcps1.2.5.1.2 "><p id="p45331059142519"><a name="p45331059142519"></a><a name="p45331059142519"></a>子项目ID</p>
+</td>
+<td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.3 "><p id="p853313594251"><a name="p853313594251"></a><a name="p853313594251"></a>在多项目场景中，必须填写该字段。</p>
+</td>
+<td class="cellrowborder" valign="top" width="34%" headers="mcps1.2.5.1.4 "><p id="p45336598251"><a name="p45336598251"></a><a name="p45336598251"></a>-</p>
+</td>
+</tr>
+<tr id="row59331337113918"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.2.5.1.1 "><p id="p16533115911258"><a name="p16533115911258"></a><a name="p16533115911258"></a>X-Domain-ID</p>
+</td>
+<td class="cellrowborder" valign="top" width="23%" headers="mcps1.2.5.1.2 "><p id="p18533459182516"><a name="p18533459182516"></a><a name="p18533459182516"></a>账号ID</p>
+</td>
+<td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.3 "><p id="p14821740144110"><a name="p14821740144110"></a><a name="p14821740144110"></a>否，在调用全局服务接口时必须填写该字段。</p>
+</td>
+<td class="cellrowborder" valign="top" width="34%" headers="mcps1.2.5.1.4 "><p id="p9534205942518"><a name="p9534205942518"></a><a name="p9534205942518"></a>-</p>
 </td>
 </tr>
 </tbody>
@@ -147,8 +189,8 @@ HTTP方法（也称为操作或动词），它告诉服务你正在请求什么�
 
 响应消息头包含如下两部分。
 
--   一个HTTP状态代码，从2xx成功代码到4xx或5xx错误代码。或者，可以返回服务定义的状态码，如API文档中所示。
--   附加响应头字段，如支持请求的响应所需，如Content-type响应消息头。详细的公共响应消息头字段请参见[表4](#tb5107e70c1d545de8b97ed913f602b83)。
+-   一个HTTP状态代码：从2xx成功代码到4xx或5xx错误代码，或者，可以返回服务定义的状态码，如API文档中所示。
+-   附加响应头字段，支持请求的响应所需，如Content-Type响应消息头。详细的公共响应消息头字段请参见[表4](#tb5107e70c1d545de8b97ed913f602b83)。
 
     **表 4**  响应消息头
 
@@ -211,6 +253,6 @@ HTTP方法（也称为操作或动词），它告诉服务你正在请求什么�
 
 -   REST客户端
 
-    Mozilla、Google都为REST提供了图形化的浏览器插件，发送处理请求消息。针对Firefox，请参见[Firefox REST Client](https://addons.mozilla.org/en-US/firefox/addon/restclient/)。针对Chrome，请参见[Postman Interceptor](https://chrome.google.com/webstore/detail/postman-interceptor/aicmkgpgakddgnaphhhpliifpcfhicfo/)。
+    Mozilla、Google都为REST提供了图形化的浏览器插件，发送处理请求消息。如果浏览器是Firefox，请参见[Firefox REST Client](https://addons.mozilla.org/en-US/firefox/addon/restclient/)。如果浏览器是Chrome，请参见[Postman Interceptor](https://chrome.google.com/webstore/detail/postman-interceptor/aicmkgpgakddgnaphhhpliifpcfhicfo/)。
 
 

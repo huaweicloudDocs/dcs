@@ -1,11 +1,11 @@
-# 连接Memcached实例<a name="ZH-CN_TOPIC_0144197294"></a>
+# 连接Memcached实例<a name="zh-cn_topic_0082114845"></a>
 
 任何兼容Memcached协议的客户端都可以连接Memcached实例。您可以根据自身应用特点选用合适的Memcached客户端。
 
-## 前提条件<a name="zh-cn_topic_0082114845_section14501642174811"></a>
+## 前提条件<a name="section14501642174811"></a>
 
 -   已成功申请Memcached实例，且状态为“运行中”。
--   使用Telnet客户端连接Memcached实例时，需要开启免密访问模式，若未开启请参考[开启Memcached实例的免密访问](开启Memcached实例的免密访问.md#ZH-CN_TOPIC_0144197434)。其他客户端密码模式和免密模式都支持。
+-   使用Telnet客户端连接Memcached实例时，需要开启免密访问模式，若未开启请参考[开启Memcached实例的免密访问](开启Memcached实例的免密访问.md)。其他客户端密码模式和免密模式都支持。
 -   已创建弹性云服务器，并已安装好客户端。创建弹性云服务器的方法，请参见《弹性云服务器用户指南》。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
@@ -17,9 +17,9 @@
 -   建议在使用本手册时删除示例代码中的所有注释信息。
 -   请确保所有命令行、代码块输入格式都是UTF-8，否则会出现编译出错或者运行失败的情况。
 
-## **Telnet客户端示例**<a name="zh-cn_topic_0082114845_section10709163710106"></a>
+## **Telnet客户端示例**<a name="section10709163710106"></a>
 
-Telnet客户端只支持连接免密访问模式下的Memcached实例，此时只支持二进制协议。若未开启请参考[开启Memcached实例的免密访问](开启Memcached实例的免密访问.md#ZH-CN_TOPIC_0144197434)。
+Telnet客户端只支持连接免密访问模式下的Memcached实例，此时只支持二进制协议。若未开启请参考[开启Memcached实例的免密访问](开启Memcached实例的免密访问.md)。
 
 1.  登录[分布式缓存服务管理控制台](https://console.huaweicloud.com/dcs)。
 2.  在管理控制台左上角单击![](figures/icon-region.png)，选择区域和项目。
@@ -28,7 +28,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
     >此处请选择与租户的应用服务相同的区域。  
 
 3.  单击左侧菜单栏的“缓存管理”，进入缓存实例信息页面。
-4.  <a name="zh-cn_topic_0082114845_li7304143"></a>单击需要使用的其中一个Memcached实例的名称，进入该Memcached实例的基本信息页面。查看并获取该Memcached实例的IP地址/域名和端口。
+4.  <a name="li7304143"></a>单击需要使用的其中一个Memcached实例的名称，进入该Memcached实例的基本信息页面。查看并获取该Memcached实例的IP地址/域名和端口。
 5.  连接Memcached实例。
     1.  登录已创建的弹性云服务器。
     2.  执行如下命令，确认是否已安装Telnet客户端。
@@ -44,7 +44,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
 
         _**telnet \{ip or domain name\} \{port\}**_
 
-        其中\{ip or domain name\} 为Memcached实例的IP地址/域名，\{port\}为Memcached实例的端口。IP地址/域名和端口获取方法请参考步骤[4](#zh-cn_topic_0082114845_li7304143)，请按实际情况修改后执行。
+        其中\{ip or domain name\} 为Memcached实例的IP地址/域名，\{port\}为Memcached实例的端口。IP地址/域名和端口获取方法请参考步骤[4](#li7304143)，请按实际情况修改后执行。
 
         界面提示如下表示连接缓存实例成功。
 
@@ -68,7 +68,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
 
 
 
-## **Java客户端示例**<a name="zh-cn_topic_0082114845_section39831643171118"></a>
+## **Java客户端示例**<a name="section39831643171118"></a>
 
 -   用户的弹性云服务器已安装好Java JDK和常用的IDE（如Eclipse）。
 -   已获取[spymemcached-x.y.z.jar](http://central.maven.org/maven2/net/spy/spymemcached)依赖包。
@@ -77,7 +77,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
     >其中x.y.z为依赖包的版本号，建议获取最新版本。  
 
 
-1.  <a name="zh-cn_topic_0082114845_li11825141112015"></a>获取Memcached实例的IP/域名和端口。
+1.  <a name="li11825141112015"></a>获取Memcached实例的IP/域名和端口。
     1.  登录[分布式缓存服务管理控制台](https://console.huaweicloud.com/dcs)。
     2.  在管理控制台左上角单击![](figures/icon-region.png)，选择区域和项目。
 
@@ -93,7 +93,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
 5.  新建一个ConnectMemcached1类，将如下Java代码复制到类中并修改代码。
     -   密码模式代码示例
 
-        其中ip or domain name:port需要修改为[1](#zh-cn_topic_0082114845_li11825141112015)获取的Memcached实例IP地址/域名和端口。userName和password需要修改为Memcached实例的用户名和密码。
+        其中ip or domain name:port需要修改为[1](#li11825141112015)获取的Memcached实例IP地址/域名和端口。userName和password需要修改为Memcached实例的用户名和密码。
 
         ```
         //java 连接加密的Memcached代码
@@ -171,7 +171,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
 
     -   免密模式代码示例
 
-        其中ip or domain name:port需要修改为[1](#zh-cn_topic_0082114845_li11825141112015)获取的Memcached实例IP地址/域名和端口。
+        其中ip or domain name:port需要修改为[1](#li11825141112015)获取的Memcached实例IP地址/域名和端口。
 
         ```
         //java 连接免密的Memcached代码
@@ -244,7 +244,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
     ```
 
 
-## **Python客户端示例**<a name="zh-cn_topic_0082114845_section16774173023520"></a>
+## **Python客户端示例**<a name="section16774173023520"></a>
 
 -   用户的弹性云服务器已安装好Python，建议为2.7.6或更高版本。
 -   已获取[<u>python-binary-memcached-x.y.z.zip</u>](https://github.com/jaysonsantos/python-binary-memcached/releases)依赖包。
@@ -253,7 +253,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
     >其中x.y.z为依赖包的版本号，建议获取最新版本。  
 
 
-1.  <a name="zh-cn_topic_0082114845_li122821753153715"></a>获取Memcached实例的IP地址/域名和端口。
+1.  <a name="li122821753153715"></a>获取Memcached实例的IP地址/域名和端口。
     1.  登录[分布式缓存服务管理控制台](https://console.huaweicloud.com/dcs)。
     2.  在管理控制台左上角单击![](figures/icon-region.png)，选择区域和项目。
 
@@ -281,7 +281,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
 5.  新建Python文件如dcs\_test.py，将如下Python代码复制到dcs\_test.py文件并修改代码。
     -   密码模式代码示例
 
-        其中ip or domain name:port需要修改为[1](#zh-cn_topic_0082114845_li122821753153715)获取的Memcached实例IP地址/域名和端口。userName和password需要修改为Memcached实例的用户名和密码。
+        其中ip or domain name:port需要修改为[1](#li122821753153715)获取的Memcached实例IP地址/域名和端口。userName和password需要修改为Memcached实例的用户名和密码。
 
         ```
         import bmemcached
@@ -294,7 +294,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
 
     -   免密模式代码示例
 
-        其中ip or domain name:port需要修改为[1](#zh-cn_topic_0082114845_li122821753153715)获取的Memcached实例IP地址/域名和端口。
+        其中ip or domain name:port需要修改为[1](#li122821753153715)获取的Memcached实例IP地址/域名和端口。
 
         ```
         import bmemcached
@@ -317,7 +317,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
     ```
 
 
-## **C++客户端示例**<a name="zh-cn_topic_0082114845_section15431539195717"></a>
+## **C++客户端示例**<a name="section15431539195717"></a>
 
 -   用户的弹性云服务器已安装好GCC，建议为4.8.4或更高版本。
 -   已获取[l](https://launchpad.net/libmemcached/+download)[ibmemcached-x.y.z.tar.gz](https://launchpad.net/libmemcached/+download)依赖包。
@@ -326,7 +326,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
     >其中x.y.z为依赖包的版本号，建议获取最新版本。  
 
 
-1.  <a name="zh-cn_topic_0082114845_li134451239105715"></a>获取Memcached实例的IP地址/域名和端口。
+1.  <a name="li134451239105715"></a>获取Memcached实例的IP地址/域名和端口。
     1.  登录[分布式缓存服务管理控制台](https://console.huaweicloud.com/dcs)。
     2.  在管理控制台左上角单击![](figures/icon-region.png)，选择区域和项目。
 
@@ -368,7 +368,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
 7.  新建dcs\_sample.cpp文件，将如下C++代码复制到dcs\_sample.cpp文件并修改代码。
     -   密码模式代码示例
 
-        其中ip or domain name和port需要修改为[1](#zh-cn_topic_0082114845_li134451239105715)获取的Memcached实例IP地址/域名和端口。userName和password需要修改为Memcached实例的用户名和密码。
+        其中ip or domain name和port需要修改为[1](#li134451239105715)获取的Memcached实例IP地址/域名和端口。userName和password需要修改为Memcached实例的用户名和密码。
 
         ```
         #include <iostream>
@@ -423,7 +423,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
 
     -   免密模式代码示例
 
-        其中ip or domain name和port需要修改为[1](#zh-cn_topic_0082114845_li134451239105715)获取的Memcached实例IP地址/域名和端口。
+        其中ip or domain name和port需要修改为[1](#li134451239105715)获取的Memcached实例IP地址/域名和端口。
 
         ```
         #include <iostream>
@@ -490,7 +490,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
     ```
 
 
-## PHP客户端<a name="zh-cn_topic_0082114845_section16569161111543"></a>
+## PHP客户端<a name="section16569161111543"></a>
 
 **RedHat系列**：
 
@@ -554,7 +554,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
     memcached.use_sasl = 1
     ```
 
-    **图 1**  增加php.ini配置<a name="zh-cn_topic_0082114845_fig19586203114111"></a>  
+    **图 1**  增加php.ini配置<a name="fig19586203114111"></a>  
     ![](figures/增加php-ini配置.png "增加php-ini配置")
 
 7.  测试连接。
@@ -674,7 +674,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
     memcached.use_sasl = 1
     ```
 
-    **图 2**  增加pdo.ini配置<a name="zh-cn_topic_0082114845_fig811317524210"></a>  
+    **图 2**  增加pdo.ini配置<a name="fig811317524210"></a>  
     ![](figures/增加pdo-ini配置.png "增加pdo-ini配置")
 
 7.  测试连接。
@@ -705,25 +705,25 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
     ```
 
 
-## 相关产品及文档<a name="zh-cn_topic_0082114845_section9775204424615"></a>
+## 相关产品及文档<a name="section9775204424615"></a>
 
-<a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_table1073594361220"></a>
-<table><thead align="left"><tr id="zh-cn_topic_0082114845_zh-cn_topic_0046844820_row197372430123"><th class="cellrowborder" valign="top" width="50%" id="mcps1.1.3.1.1"><p id="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p4737243111216"><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p4737243111216"></a><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p4737243111216"></a>相关产品</p>
+<a name="td475c361406b4841ba0faa98fc782ed5"></a>
+<table><thead align="left"><tr id="rb27d733848ce4e7a9386965803595f1b"><th class="cellrowborder" valign="top" width="50%" id="mcps1.1.3.1.1"><p id="a5cc8ae3032d8416f9696b6f2a50d82d4"><a name="a5cc8ae3032d8416f9696b6f2a50d82d4"></a><a name="a5cc8ae3032d8416f9696b6f2a50d82d4"></a>相关产品</p>
 </th>
-<th class="cellrowborder" valign="top" width="50%" id="mcps1.1.3.1.2"><p id="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p18737144301214"><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p18737144301214"></a><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p18737144301214"></a>相关文档</p>
+<th class="cellrowborder" valign="top" width="50%" id="mcps1.1.3.1.2"><p id="ad3b8309045294369bdb9a006daef8f00"><a name="ad3b8309045294369bdb9a006daef8f00"></a><a name="ad3b8309045294369bdb9a006daef8f00"></a>相关文档</p>
 </th>
 </tr>
 </thead>
-<tbody><tr id="zh-cn_topic_0082114845_zh-cn_topic_0046844820_row17371443131210"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p13372054101419"><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p13372054101419"></a><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p13372054101419"></a><a href="https://www.huaweicloud.com/product/dcs.html?infodocbz" target="_blank" rel="noopener noreferrer">分布式缓存 Redis</a></p>
-<p id="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p19548105714519"><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p19548105714519"></a><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p19548105714519"></a><a href="https://www.huaweicloud.com/product/dcsmem.html?infodocbz" target="_blank" rel="noopener noreferrer">分布式缓存 Memcached</a></p>
-<p id="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p8862161219564"><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p8862161219564"></a><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p8862161219564"></a><a href="https://www.huaweicloud.com/product/ecs.html?infodocbz" target="_blank" rel="noopener noreferrer">弹性云服务器 ECS</a></p>
-<p id="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p841193941416"><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p841193941416"></a><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p841193941416"></a><a href="http://www.huaweicloud.com/product/vpc.html?infodocbz" target="_blank" rel="noopener noreferrer">虚拟私有云 VPC</a></p>
+<tbody><tr id="re4588baf45714b4f80c021cca1290879"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="a8c37acc50b884e0b9a71051bcb9179b4"><a name="a8c37acc50b884e0b9a71051bcb9179b4"></a><a name="a8c37acc50b884e0b9a71051bcb9179b4"></a><a href="https://www.huaweicloud.com/product/dcs.html?infodocbz" target="_blank" rel="noopener noreferrer">分布式缓存 Redis</a></p>
+<p id="a11d9314698354304b9a9e9cb1270b5c9"><a name="a11d9314698354304b9a9e9cb1270b5c9"></a><a name="a11d9314698354304b9a9e9cb1270b5c9"></a><a href="https://www.huaweicloud.com/product/dcsmem.html?infodocbz" target="_blank" rel="noopener noreferrer">分布式缓存 Memcached</a></p>
+<p id="abeaed75bd99c4aeeb5ef850c82a274f2"><a name="abeaed75bd99c4aeeb5ef850c82a274f2"></a><a name="abeaed75bd99c4aeeb5ef850c82a274f2"></a><a href="https://www.huaweicloud.com/product/ecs.html?infodocbz" target="_blank" rel="noopener noreferrer">弹性云服务器 ECS</a></p>
+<p id="zh-cn_topic_0046844820_p841193941416"><a name="zh-cn_topic_0046844820_p841193941416"></a><a name="zh-cn_topic_0046844820_p841193941416"></a><a href="http://www.huaweicloud.com/product/vpc.html?infodocbz" target="_blank" rel="noopener noreferrer">虚拟私有云 VPC</a></p>
 </td>
-<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p1381695711471"><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p1381695711471"></a><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p1381695711471"></a><a href="https://support.huaweicloud.com/usermanual-dcs/dcs-zh-ug-180315001.html?infodocbz" target="_blank" rel="noopener noreferrer">购买Redis实例</a></p>
-<p id="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p682916370595"><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p682916370595"></a><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p682916370595"></a><a href="https://support.huaweicloud.com/usermanual-dcs/zh-cn_topic_0082114847.html?infodocbz" target="_blank" rel="noopener noreferrer">连接Redis实例</a></p>
-<p id="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p16726748155912"><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p16726748155912"></a><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p16726748155912"></a><a href="https://support.huaweicloud.com/usermanual-dcs/zh-cn_topic_0061845451.html?infodocbz" target="_blank" rel="noopener noreferrer">变更缓存实例规格</a></p>
-<p id="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p12250886517"><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p12250886517"></a><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p12250886517"></a><a href="https://support.huaweicloud.com/usermanual-dcs/zh-cn_topic_0079545637.html?infodocbz" target="_blank" rel="noopener noreferrer">缓存实例备份恢复</a></p>
-<p id="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p143616360517"><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p143616360517"></a><a name="zh-cn_topic_0082114845_zh-cn_topic_0046844820_p143616360517"></a><a href="https://support.huaweicloud.com/migration-dcs/zh-cn_topic_0078784423.html?infodocbz" target="_blank" rel="noopener noreferrer">缓存实例数据迁移</a></p>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="a0c4ea7b976b745079231aeb676430680"><a name="a0c4ea7b976b745079231aeb676430680"></a><a name="a0c4ea7b976b745079231aeb676430680"></a><a href="https://support.huaweicloud.com/usermanual-dcs/dcs-zh-ug-180315001.html?infodocbz" target="_blank" rel="noopener noreferrer">购买Redis实例</a></p>
+<p id="zh-cn_topic_0046844820_p682916370595"><a name="zh-cn_topic_0046844820_p682916370595"></a><a name="zh-cn_topic_0046844820_p682916370595"></a><a href="https://support.huaweicloud.com/usermanual-dcs/zh-cn_topic_0082114847.html?infodocbz" target="_blank" rel="noopener noreferrer">连接Redis实例</a></p>
+<p id="a3d146c9e41904a09b098cc34a53b5652"><a name="a3d146c9e41904a09b098cc34a53b5652"></a><a name="a3d146c9e41904a09b098cc34a53b5652"></a><a href="https://support.huaweicloud.com/usermanual-dcs/zh-cn_topic_0061845451.html?infodocbz" target="_blank" rel="noopener noreferrer">变更缓存实例规格</a></p>
+<p id="zh-cn_topic_0046844820_p12250886517"><a name="zh-cn_topic_0046844820_p12250886517"></a><a name="zh-cn_topic_0046844820_p12250886517"></a><a href="https://support.huaweicloud.com/usermanual-dcs/zh-cn_topic_0079545637.html?infodocbz" target="_blank" rel="noopener noreferrer">缓存实例备份恢复</a></p>
+<p id="zh-cn_topic_0046844820_p143616360517"><a name="zh-cn_topic_0046844820_p143616360517"></a><a name="zh-cn_topic_0046844820_p143616360517"></a><a href="https://support.huaweicloud.com/migration-dcs/zh-cn_topic_0078784423.html?infodocbz" target="_blank" rel="noopener noreferrer">缓存实例数据迁移</a></p>
 </td>
 </tr>
 </tbody>

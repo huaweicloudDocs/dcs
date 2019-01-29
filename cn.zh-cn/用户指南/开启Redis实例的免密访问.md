@@ -1,4 +1,4 @@
-# 开启Redis实例的免密访问<a name="ZH-CN_TOPIC_0144197417"></a>
+# 开启Redis实例的免密访问<a name="dcs-zh-ug-180312005"></a>
 
 用户需要通过免密访问模式连接Redis实例，可通过开启Redis实例的免密访问功能，清空Redis实例的密码。
 
@@ -8,11 +8,11 @@
 >-   免密模式存在安全风险，之后您可以通过重置密码进行密码设置。  
 >-   为保护Redis实例的网络安全性，开启公网访问的Redis实例不支持同时开启免密访问。  
 
-## 前提条件<a name="zh-cn_topic_0100102141_section34216874"></a>
+## 前提条件<a name="section34216874"></a>
 
 已成功创建Redis实例，且实例未开启公网访问功能。
 
-## 操作步骤<a name="zh-cn_topic_0100102141_section166215281808"></a>
+## 操作步骤<a name="section166215281808"></a>
 
 1.  登录[分布式缓存服务管理控制台](https://console.huaweicloud.com/dcs)。
 2.  在管理控制台左上角单击![](figures/icon-region.png)，选择区域和项目。
@@ -32,25 +32,25 @@
     >-   验证码有效期默认为10分钟，10分钟后请重新获取验证码。  
 
 
-## 相关产品及文档<a name="zh-cn_topic_0100102141_section152613113129"></a>
+## 相关产品及文档<a name="section152613113129"></a>
 
-<a name="zh-cn_topic_0100102141_zh-cn_topic_0046844820_table1073594361220"></a>
-<table><thead align="left"><tr id="zh-cn_topic_0100102141_zh-cn_topic_0046844820_row197372430123"><th class="cellrowborder" valign="top" width="50%" id="mcps1.1.3.1.1"><p id="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p4737243111216"><a name="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p4737243111216"></a><a name="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p4737243111216"></a>相关产品</p>
+<a name="td475c361406b4841ba0faa98fc782ed5"></a>
+<table><thead align="left"><tr id="rb27d733848ce4e7a9386965803595f1b"><th class="cellrowborder" valign="top" width="50%" id="mcps1.1.3.1.1"><p id="a5cc8ae3032d8416f9696b6f2a50d82d4"><a name="a5cc8ae3032d8416f9696b6f2a50d82d4"></a><a name="a5cc8ae3032d8416f9696b6f2a50d82d4"></a>相关产品</p>
 </th>
-<th class="cellrowborder" valign="top" width="50%" id="mcps1.1.3.1.2"><p id="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p18737144301214"><a name="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p18737144301214"></a><a name="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p18737144301214"></a>相关文档</p>
+<th class="cellrowborder" valign="top" width="50%" id="mcps1.1.3.1.2"><p id="ad3b8309045294369bdb9a006daef8f00"><a name="ad3b8309045294369bdb9a006daef8f00"></a><a name="ad3b8309045294369bdb9a006daef8f00"></a>相关文档</p>
 </th>
 </tr>
 </thead>
-<tbody><tr id="zh-cn_topic_0100102141_zh-cn_topic_0046844820_row17371443131210"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p13372054101419"><a name="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p13372054101419"></a><a name="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p13372054101419"></a><a href="https://www.huaweicloud.com/product/dcs.html?infodocbz" target="_blank" rel="noopener noreferrer">分布式缓存 Redis</a></p>
-<p id="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p19548105714519"><a name="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p19548105714519"></a><a name="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p19548105714519"></a><a href="https://www.huaweicloud.com/product/dcsmem.html?infodocbz" target="_blank" rel="noopener noreferrer">分布式缓存 Memcached</a></p>
-<p id="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p8862161219564"><a name="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p8862161219564"></a><a name="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p8862161219564"></a><a href="https://www.huaweicloud.com/product/ecs.html?infodocbz" target="_blank" rel="noopener noreferrer">弹性云服务器 ECS</a></p>
-<p id="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p841193941416"><a name="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p841193941416"></a><a name="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p841193941416"></a><a href="http://www.huaweicloud.com/product/vpc.html?infodocbz" target="_blank" rel="noopener noreferrer">虚拟私有云 VPC</a></p>
+<tbody><tr id="re4588baf45714b4f80c021cca1290879"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="a8c37acc50b884e0b9a71051bcb9179b4"><a name="a8c37acc50b884e0b9a71051bcb9179b4"></a><a name="a8c37acc50b884e0b9a71051bcb9179b4"></a><a href="https://www.huaweicloud.com/product/dcs.html?infodocbz" target="_blank" rel="noopener noreferrer">分布式缓存 Redis</a></p>
+<p id="a11d9314698354304b9a9e9cb1270b5c9"><a name="a11d9314698354304b9a9e9cb1270b5c9"></a><a name="a11d9314698354304b9a9e9cb1270b5c9"></a><a href="https://www.huaweicloud.com/product/dcsmem.html?infodocbz" target="_blank" rel="noopener noreferrer">分布式缓存 Memcached</a></p>
+<p id="abeaed75bd99c4aeeb5ef850c82a274f2"><a name="abeaed75bd99c4aeeb5ef850c82a274f2"></a><a name="abeaed75bd99c4aeeb5ef850c82a274f2"></a><a href="https://www.huaweicloud.com/product/ecs.html?infodocbz" target="_blank" rel="noopener noreferrer">弹性云服务器 ECS</a></p>
+<p id="zh-cn_topic_0046844820_p841193941416"><a name="zh-cn_topic_0046844820_p841193941416"></a><a name="zh-cn_topic_0046844820_p841193941416"></a><a href="http://www.huaweicloud.com/product/vpc.html?infodocbz" target="_blank" rel="noopener noreferrer">虚拟私有云 VPC</a></p>
 </td>
-<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p1381695711471"><a name="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p1381695711471"></a><a name="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p1381695711471"></a><a href="https://support.huaweicloud.com/usermanual-dcs/dcs-zh-ug-180315001.html?infodocbz" target="_blank" rel="noopener noreferrer">购买Redis实例</a></p>
-<p id="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p682916370595"><a name="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p682916370595"></a><a name="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p682916370595"></a><a href="https://support.huaweicloud.com/usermanual-dcs/zh-cn_topic_0082114847.html?infodocbz" target="_blank" rel="noopener noreferrer">连接Redis实例</a></p>
-<p id="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p16726748155912"><a name="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p16726748155912"></a><a name="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p16726748155912"></a><a href="https://support.huaweicloud.com/usermanual-dcs/zh-cn_topic_0061845451.html?infodocbz" target="_blank" rel="noopener noreferrer">变更缓存实例规格</a></p>
-<p id="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p12250886517"><a name="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p12250886517"></a><a name="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p12250886517"></a><a href="https://support.huaweicloud.com/usermanual-dcs/zh-cn_topic_0079545637.html?infodocbz" target="_blank" rel="noopener noreferrer">缓存实例备份恢复</a></p>
-<p id="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p143616360517"><a name="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p143616360517"></a><a name="zh-cn_topic_0100102141_zh-cn_topic_0046844820_p143616360517"></a><a href="https://support.huaweicloud.com/migration-dcs/zh-cn_topic_0078784423.html?infodocbz" target="_blank" rel="noopener noreferrer">缓存实例数据迁移</a></p>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="a0c4ea7b976b745079231aeb676430680"><a name="a0c4ea7b976b745079231aeb676430680"></a><a name="a0c4ea7b976b745079231aeb676430680"></a><a href="https://support.huaweicloud.com/usermanual-dcs/dcs-zh-ug-180315001.html?infodocbz" target="_blank" rel="noopener noreferrer">购买Redis实例</a></p>
+<p id="zh-cn_topic_0046844820_p682916370595"><a name="zh-cn_topic_0046844820_p682916370595"></a><a name="zh-cn_topic_0046844820_p682916370595"></a><a href="https://support.huaweicloud.com/usermanual-dcs/zh-cn_topic_0082114847.html?infodocbz" target="_blank" rel="noopener noreferrer">连接Redis实例</a></p>
+<p id="a3d146c9e41904a09b098cc34a53b5652"><a name="a3d146c9e41904a09b098cc34a53b5652"></a><a name="a3d146c9e41904a09b098cc34a53b5652"></a><a href="https://support.huaweicloud.com/usermanual-dcs/zh-cn_topic_0061845451.html?infodocbz" target="_blank" rel="noopener noreferrer">变更缓存实例规格</a></p>
+<p id="zh-cn_topic_0046844820_p12250886517"><a name="zh-cn_topic_0046844820_p12250886517"></a><a name="zh-cn_topic_0046844820_p12250886517"></a><a href="https://support.huaweicloud.com/usermanual-dcs/zh-cn_topic_0079545637.html?infodocbz" target="_blank" rel="noopener noreferrer">缓存实例备份恢复</a></p>
+<p id="zh-cn_topic_0046844820_p143616360517"><a name="zh-cn_topic_0046844820_p143616360517"></a><a name="zh-cn_topic_0046844820_p143616360517"></a><a href="https://support.huaweicloud.com/migration-dcs/zh-cn_topic_0078784423.html?infodocbz" target="_blank" rel="noopener noreferrer">缓存实例数据迁移</a></p>
 </td>
 </tr>
 </tbody>

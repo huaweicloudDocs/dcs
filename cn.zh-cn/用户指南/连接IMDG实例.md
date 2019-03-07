@@ -16,7 +16,7 @@ DCS IMDG提供基于GridGain的接口，第三方应用程序直接使用DCS IMD
 </th>
 </tr>
 </thead>
-<tbody><tr id="row17371443131210"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="p13372054101419"><a name="p13372054101419"></a><a name="p13372054101419"></a><a href="https://www.huaweicloud.com/product/dcs.html?infodocbz" target="_blank" rel="noopener noreferrer">分布式缓存 Redis </a></p>
+<tbody><tr id="row17371443131210"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="p13372054101419"><a name="p13372054101419"></a><a name="p13372054101419"></a><a href="https://www.huaweicloud.com/product/dcs.html?infodocbz" target="_blank" rel="noopener noreferrer">分布式缓存 Redis</a></p>
 <p id="p19548105714519"><a name="p19548105714519"></a><a name="p19548105714519"></a><a href="https://www.huaweicloud.com/product/dcsmem.html?infodocbz" target="_blank" rel="noopener noreferrer">分布式缓存 Memcached</a></p>
 <p id="p8862161219564"><a name="p8862161219564"></a><a name="p8862161219564"></a><a href="https://www.huaweicloud.com/product/ecs.html?infodocbz" target="_blank" rel="noopener noreferrer">弹性云服务器 ECS</a></p>
 <p id="p841193941416"><a name="p841193941416"></a><a name="p841193941416"></a><a href="http://www.huaweicloud.com/product/vpc.html?infodocbz" target="_blank" rel="noopener noreferrer">虚拟私有云 VPC</a></p>

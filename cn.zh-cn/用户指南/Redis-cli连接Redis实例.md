@@ -1,6 +1,6 @@
 # Redis-cli连接Redis实例<a name="zh-cn_topic_0082114847"></a>
 
-介绍使用同一VPC内弹性云服务器ECS上的Redis-Cli连接Redis实例的方法。更多的客户端的使用方法，请参考[https://redis.io/clients](https://redis.io/clients)。
+介绍使用同一VPC内弹性云服务器ECS上的Redis-Cli连接Redis实例的方法。更多的客户端的使用方法，请参考[https://redis.io/clients](https://redis.io/clients)
 
 ## 前提条件<a name="section1502270695932"></a>
 
@@ -53,11 +53,24 @@
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
     >Windows版本的Redis客户端安装包，下载请单击[这里](https://github.com/MicrosoftArchive/redis/tags)。下载后直接解压安装包，然后使用cmd工具进入解压目录，执行以下命令连接redis实例：  
-    >**redis-cli -h** **_XXX_  -p 6379** **-a  _<password\>_**  
-    >其中：  
-    >-   “XXX“为Redis实例的IP地址/域名，“6379“为Redis实例的端口。IP地址/域名和端口获取见步骤[1](#li5799181918288)，请按实际情况修改后执行。  
-    >-   “<password\>”为创建Redis实例时自定义的密码，请按实际情况修改后执行。  
+    >**redis-cli -h** **_XXX_  -p 6379**  
+    >其中：“XXX“为Redis实例的IP地址/域名，“6379“为Redis实例的端口。IP地址/域名和端口获取见步骤[1](#li5799181918288)，请按实际情况修改后执行。  
 
+
+## 连接Redis实例操作视频<a name="section9833202819317"></a>
+
+如果需要详细了解连接Reids实例的操作，请单击以下链接观看视频。
+
+[访问缓存实例操作视频](https://support.huaweicloud.com/dcs_video/index.html)
+
+## 连接Redis实例的常见问题<a name="section1422939113418"></a>
+
+-   [如何使用Redis-cli访问Redis实例？](https://support.huaweicloud.com/dcs_faq/dcs-zh-ug-190131020.html)
+-   [客户端出现概率性超时错误](https://support.huaweicloud.com/dcs_faq/zh-cn_topic_0052790071.html)
+-   [客户使用Redis版本和DCS Redis版本不同是否存在兼容问题？](https://support.huaweicloud.com/dcs_faq/dcs-zh-ug-190131010.html)
+-   [客户端访问Redis实例出现“ERR unknown command”的原因是什么？](https://support.huaweicloud.com/dcs_faq/dcs-zh-ug-190131011.html)
+-   [为什么我的DCS缓存实例支持域名访问后，客户端无法使用域名连接DCS缓存实例？](https://support.huaweicloud.com/dcs_faq/dcs-zh-ug-180312004.html)
+-   [Redis命令执行是否有超时时间？超时了会出现什么结果？](https://support.huaweicloud.com/dcs_faq/dcs-zh-ug-180718002.html)
 
 ## 相关产品及文档<a name="section152613113129"></a>
 

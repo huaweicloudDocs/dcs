@@ -1,35 +1,33 @@
 # 用户指南
 
--   [访问和使用]
+-   [入门必读]
     -   [分布式缓存服务简介](分布式缓存服务简介.md)
-    -   [管理分布式缓存服务](管理分布式缓存服务.md)
+    -   [管理和使用分布式缓存服务](管理和使用分布式缓存服务.md)
     -   [与其他服务的关系](与其他服务的关系.md)
     -   [其他相关概念](其他相关概念.md)
 
--   [入门]
-    -   [环境准备](环境准备.md)
-    -   [购买缓存实例]
-        -   [购买Redis实例](购买Redis实例.md)
-        -   [购买Memcached实例](购买Memcached实例.md)
-        -   [购买IMDG实例](购买IMDG实例.md)
+-   [购买缓存实例]
+    -   [网络环境准备](网络环境准备.md)
+    -   [购买Redis实例](购买Redis实例.md)
+    -   [购买Memcached实例](购买Memcached实例.md)
+    -   [购买IMDG实例](购买IMDG实例.md)
 
-    -   [连接缓存实例]
-        -   [约束说明](约束说明.md)
-        -   [Redis-cli连接Redis实例](Redis-cli连接Redis实例.md)
-        -   [Jedis连接Redis实例](Jedis连接Redis实例.md)
-        -   [phpredis连接Redis实例](phpredis连接Redis实例.md)
-        -   [hiredis连接Redis实例](hiredis连接Redis实例.md)
-        -   [Python Redis客户端连接Redis实例](Python-Redis客户端连接Redis实例.md)
-        -   [NodeJs Redis客户端连接Redis实例](NodeJs-Redis客户端连接Redis实例.md)
-        -   [C\# Redis客户端连接Redis实例](C-Redis客户端连接Redis实例.md)
-        -   [公网连接Redis实例](公网连接Redis实例.md)
-        -   [连接Memcached实例](连接Memcached实例.md)
-        -   [连接IMDG实例](连接IMDG实例.md)
-        -   [通过WebCli连接Redis 4.x和5.x实例](通过WebCli连接Redis-4-x和5-x实例.md)
-
-    -   [查看缓存实例信息](查看缓存实例信息.md)
+-   [连接缓存实例]
+    -   [约束说明](约束说明.md)
+    -   [Redis-cli连接Redis实例](Redis-cli连接Redis实例.md)
+    -   [Jedis连接Redis实例](Jedis连接Redis实例.md)
+    -   [phpredis连接Redis实例](phpredis连接Redis实例.md)
+    -   [hiredis连接Redis实例](hiredis连接Redis实例.md)
+    -   [Python Redis客户端连接Redis实例](Python-Redis客户端连接Redis实例.md)
+    -   [NodeJs Redis客户端连接Redis实例](NodeJs-Redis客户端连接Redis实例.md)
+    -   [C\# Redis客户端连接Redis实例](C-Redis客户端连接Redis实例.md)
+    -   [公网连接Redis实例](公网连接Redis实例.md)
+    -   [连接Memcached实例](连接Memcached实例.md)
+    -   [连接IMDG实例](连接IMDG实例.md)
+    -   [通过WebCli连接Redis 4.x和5.x实例](通过WebCli连接Redis-4-x和5-x实例.md)
 
 -   [实例日常操作]
+    -   [查看缓存实例信息](查看缓存实例信息.md)
     -   [开启缓存实例](开启缓存实例.md)
     -   [关闭缓存实例](关闭缓存实例.md)
     -   [重启缓存实例](重启缓存实例.md)
@@ -37,7 +35,7 @@
     -   [清空实例数据](清空实例数据.md)
     -   [导出缓存实例列表](导出缓存实例列表.md)
     -   [导入离线实例](导入离线实例.md)
-    -   [变更实例计费模式](变更实例计费模式.md)
+    -   [转包周期](转包周期.md)
 
 -   [实例配置管理]
     -   [配置管理说明](配置管理说明.md)
@@ -62,6 +60,7 @@
     -   [释放全球灾备](释放全球灾备.md)
 
 -   [密码管理]
+    -   [关于实例连接密码的说明](关于实例连接密码的说明.md)
     -   [修改缓存实例密码](修改缓存实例密码.md)
     -   [重置缓存实例密码](重置缓存实例密码.md)
     -   [开启Redis实例的免密访问](开启Redis实例的免密访问.md)

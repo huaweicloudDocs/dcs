@@ -70,7 +70,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
 
 ## **Java客户端示例**<a name="section39831643171118"></a>
 
--   用户的弹性云服务器已安装好Java JDK和常用的IDE（如Eclipse）。
+-   您的弹性云服务器已安装好Java JDK和常用的IDE（如Eclipse）。
 -   已获取[spymemcached-x.y.z.jar](http://central.maven.org/maven2/net/spy/spymemcached)依赖包。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
@@ -246,7 +246,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
 
 ## **Python客户端示例**<a name="section16774173023520"></a>
 
--   用户的弹性云服务器已安装好Python，建议为2.7.6或更高版本。
+-   n 的弹性云服务器已安装好Python，建议为2.7.6或更高版本。
 -   已获取[<u>python-binary-memcached-x.y.z.zip</u>](https://github.com/jaysonsantos/python-binary-memcached/releases)依赖包。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
@@ -319,7 +319,7 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
 
 ## **C++客户端示例**<a name="section15431539195717"></a>
 
--   用户的弹性云服务器已安装好GCC，建议为4.8.4或更高版本。
+-   您的弹性云服务器已安装好GCC，建议为4.8.4或更高版本。
 -   已获取[l](https://launchpad.net/libmemcached/+download)[ibmemcached-x.y.z.tar.gz](https://launchpad.net/libmemcached/+download)依赖包。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   

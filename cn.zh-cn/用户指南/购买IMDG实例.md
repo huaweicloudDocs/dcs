@@ -3,142 +3,144 @@
 购买IMDG实例支持“按需付费”。您可以根据业务需要购买相应计算能力和存储空间的IMDG实例。
 
 >![](public_sys-resources/icon-note.gif) **说明：**   
->本操作仅部分region支持，请以控制台为准。  
+>本操作目前仅“华北-北京一”、“华东-上海二”、“华南-广州”region支持，其他region暂未支持。  
 
-## 前提条件<a name="section62331491"></a>
+## 准备工作<a name="section1262819220505"></a>
 
-IMDG实例运行于虚拟私有云。申请IMDG实例前，需保证有可用的虚拟私有云，并且已配置好安全组与子网。
+在购买实例之前，请先根据您的实际业务需要，明确购买需求，完成以下工作：
 
-创建虚拟私有云、安全组以及子网的方法，请参见[环境准备](环境准备.md)或者《虚拟私有云用户指南》。
+1.  准备网络环境。
+    -   如果您已有VPC，则不需要重新创建，可重复使用。
+    -   如果没有VPC，请参考[网络环境准备](网络环境准备.md)创建VPC、安全组和子网。
 
-## 操作步骤<a name="section24112512"></a>
+2.  确定购买的缓存类型。
+
+    在购买前，需要您根据业务情况选择合适的缓存类型，选择了缓存类型后，不支持更改缓存类型。
+
+    -   若要了解Redis、Memcached和IMDG，请参考[DCS Redis、DCS Memcached和IMDG的介绍](https://support.huaweicloud.com/productdesc-dcs/zh-cn_topic_0088428509.html)。
+    -   若要了解Redis和Memcached的区别，请参考[Redis与Memcached之间如何选择](https://support.huaweicloud.com/productdesc-dcs/RedisAndMemcachedChoose.html)。
+
+3.  确定要购买的缓存实例类型，即实例架构。
+
+    确定缓存类型后，需要明确实例类型。实例规格特点和架构，可参考[选择实例架构](https://support.huaweicloud.com/productdesc-dcs/CacheSingleNode.html)。
+
+4.  确定实例规格。
+
+    确定实例架构后，需要明确购买规格大小。实例支持的连接数和内网带宽，可参考[产品规格](https://support.huaweicloud.com/productdesc-dcs/zh-cn_topic_0033568446.html)。
+
+5.  确定选择的区域。
+
+    选择的区域，建议选择接近您应用程序的区域，减少网络延时，例如，所在城市为中国-广州，可就近选择“华南-广州”。
+
+
+## 购买IMDG实例<a name="section24112512"></a>
 
 1.  登录[分布式缓存服务管理控制台](https://console.huaweicloud.com/dcs)。
 2.  在管理控制台左上角单击![](figures/icon-region-1.png)，选择区域和项目。
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
-    >此处请选择与租户的应用服务相同的区域。  
+    >此处请选择与您的应用服务相同的区域。  
 
 3.  单击左侧菜单栏的“缓存管理”进入“缓存管理”页面。
 4.  单击“购买缓存实例”，进入购买页面。
-5.  选择“计费模式”，单击“按需付费”。
-6.  填写IMDG实例的参数。参数说明如[表1](#table5373863818728)所示。
+5.  选择“计费模式”。选择“按需付费”。
 
-    **表 1**  参数说明
+    本章节描述购买IMDG的购买操作，IMDG只支持“按需付费”的计费模式。
 
-    <a name="table5373863818728"></a>
-    <table><thead align="left"><tr id="row5933206518728"><th class="cellrowborder" valign="top" width="17%" id="mcps1.2.3.1.1"><p id="p5858956018728"><a name="p5858956018728"></a><a name="p5858956018728"></a>参数</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="83%" id="mcps1.2.3.1.2"><p id="p4813390218728"><a name="p4813390218728"></a><a name="p4813390218728"></a>说明</p>
-    </th>
-    </tr>
-    </thead>
-    <tbody><tr id="row153681361123"><td class="cellrowborder" valign="top" width="17%" headers="mcps1.2.3.1.1 "><p id="p53681836827"><a name="p53681836827"></a><a name="p53681836827"></a>区域</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="83%" headers="mcps1.2.3.1.2 "><p id="p183684366219"><a name="p183684366219"></a><a name="p183684366219"></a>DCS服务所在区域，可在页面左上角切换区域。</p>
-    </td>
-    </tr>
-    <tr id="row5850290918728"><td class="cellrowborder" valign="top" width="17%" headers="mcps1.2.3.1.1 "><p id="p4116798118728"><a name="p4116798118728"></a><a name="p4116798118728"></a>名称</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="83%" headers="mcps1.2.3.1.2 "><p id="p3494740012058"><a name="p3494740012058"></a><a name="p3494740012058"></a>IMDG实例的名称。</p>
-    <a name="ul665662631212"></a><a name="ul665662631212"></a><ul id="ul665662631212"><li>名称不能为空。</li><li>只能以英文字母开头。</li><li>长度为4到64位的字符串。</li><li>仅包含英文字母、数字、下划线（_）和中划线（-）。</li></ul>
-    </td>
-    </tr>
-    <tr id="row1286332818728"><td class="cellrowborder" valign="top" width="17%" headers="mcps1.2.3.1.1 "><p id="p5676413618728"><a name="p5676413618728"></a><a name="p5676413618728"></a>描述</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="83%" headers="mcps1.2.3.1.2 "><p id="p3449229518728"><a name="p3449229518728"></a><a name="p3449229518728"></a>对IMDG实例的描述信息。</p>
-    </td>
-    </tr>
-    <tr id="row3606388018728"><td class="cellrowborder" valign="top" width="17%" headers="mcps1.2.3.1.1 "><p id="p110575018728"><a name="p110575018728"></a><a name="p110575018728"></a>缓存类型</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="83%" headers="mcps1.2.3.1.2 "><p id="p2245694518728"><a name="p2245694518728"></a><a name="p2245694518728"></a>缓存的引擎类型，单击选择“IMDG”。</p>
-    </td>
-    </tr>
-    <tr id="row55532325104357"><td class="cellrowborder" valign="top" width="17%" headers="mcps1.2.3.1.1 "><p id="p1824480104357"><a name="p1824480104357"></a><a name="p1824480104357"></a>实例类型</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="83%" headers="mcps1.2.3.1.2 "><p id="p13565167104357"><a name="p13565167104357"></a><a name="p13565167104357"></a>缓存实例的类型。IMDG缓存实例支持“单机”和“集群”。</p>
-    <div class="note" id="note1771175816202"><a name="note1771175816202"></a><a name="note1771175816202"></a><span class="notetitle"> 说明： </span><div class="notebody"><p id="p793431718365"><a name="p793431718365"></a><a name="p793431718365"></a>集群实例不支持通过VPC对等连接的方式进行跨VPC访问。</p>
-    </div></div>
-    <p id="p5105963408"><a name="p5105963408"></a><a name="p5105963408"></a>请根据实际需要选择实例类型，不同实例类型适用不同的业务场景，具体参考<a href="http://support.huaweicloud.com/productdesc-dcs/zh-cn_topic_0088428506.html">实例缓存类型说明</a>。</p>
-    </td>
-    </tr>
-    <tr id="row1259118918276"><td class="cellrowborder" valign="top" width="17%" headers="mcps1.2.3.1.1 "><p id="p4866108918728"><a name="p4866108918728"></a><a name="p4866108918728"></a>可用区</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="83%" headers="mcps1.2.3.1.2 "><p id="p4923409718728"><a name="p4923409718728"></a><a name="p4923409718728"></a>可选择的不同可用分区。</p>
-    <div class="note" id="note28642393311"><a name="note28642393311"></a><a name="note28642393311"></a><span class="notetitle"> 说明： </span><div class="notebody"><p id="p824037173412"><a name="p824037173412"></a><a name="p824037173412"></a>当集群IMDG实例进行跨可用分区部署时，如果其中一个可用分区故障，另一个可用分区的节点不受影响。备节点会自动升级为主节点，对外提供服务，从而提供更高的容灾能力。</p>
-    </div></div>
-    </td>
-    </tr>
-    <tr id="row135215552378"><td class="cellrowborder" valign="top" width="17%" headers="mcps1.2.3.1.1 "><p id="p653155143714"><a name="p653155143714"></a><a name="p653155143714"></a>跨可用区部署</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="83%" headers="mcps1.2.3.1.2 "><p id="p125325517376"><a name="p125325517376"></a><a name="p125325517376"></a>跨可用分区部署的开关。</p>
-    </td>
-    </tr>
-    <tr id="row6747134473311"><td class="cellrowborder" valign="top" width="17%" headers="mcps1.2.3.1.1 "><p id="p132885014331"><a name="p132885014331"></a><a name="p132885014331"></a>备可用区</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="83%" headers="mcps1.2.3.1.2 "><p id="p3772173919354"><a name="p3772173919354"></a><a name="p3772173919354"></a>备可用分区。</p>
-    <div class="note" id="note8573145918354"><a name="note8573145918354"></a><a name="note8573145918354"></a><span class="notetitle"> 说明： </span><div class="notebody"><p id="p184777915362"><a name="p184777915362"></a><a name="p184777915362"></a>只有当前存在多个可用分区，并且用户选择的实例类型为“集群”时，才会显示该参数。</p>
-    </div></div>
-    </td>
-    </tr>
-    <tr id="row5088731918728"><td class="cellrowborder" valign="top" width="17%" headers="mcps1.2.3.1.1 "><p id="p5731035618728"><a name="p5731035618728"></a><a name="p5731035618728"></a>实例规格</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="83%" headers="mcps1.2.3.1.2 "><p id="p12782887115750"><a name="p12782887115750"></a><a name="p12782887115750"></a>IMDG实例的规格。</p>
-    <div class="p" id="p132701127173718"><a name="p132701127173718"></a><a name="p132701127173718"></a>IMDG类型的缓存实例规格如下：<a name="ul6752102312348"></a><a name="ul6752102312348"></a><ul id="ul6752102312348"><li>单机实例规格支持2GB、4GB和8GB。</li><li>集群实例规格支持16GB。</li></ul>
-    </div>
-    <p id="p195594514220"><a name="p195594514220"></a><a name="p195594514220"></a>用户默认配额为最多创建5个实例，总内存不超过400GB。</p>
-    <p id="p13895221123619"><a name="p13895221123619"></a><a name="p13895221123619"></a>用户如需增加配额，单击规格下方的“申请扩大配额”，即可跳转到工单管理界面提交工单，增加配额。</p>
-    </td>
-    </tr>
-    <tr id="row3119715618728"><td class="cellrowborder" valign="top" width="17%" headers="mcps1.2.3.1.1 "><p id="p5533269218728"><a name="p5533269218728"></a><a name="p5533269218728"></a>虚拟私有云</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="83%" headers="mcps1.2.3.1.2 "><p id="p5276310218728"><a name="p5276310218728"></a><a name="p5276310218728"></a>已创建的虚拟私有云。</p>
-    <a name="ul353316111561"></a><a name="ul353316111561"></a><ul id="ul353316111561"><li>虚拟私有云可以为您的DCS缓存实例构建隔离的、用户自主配置和管理的虚拟网络环境。</li><li>单击“查看虚拟私有云”，系统跳转到虚拟私有云界面，选择相应的虚拟私有云，可以查看安全组的出方向规则和入方向规则。</li></ul>
-    </td>
-    </tr>
-    <tr id="row4851808618728"><td class="cellrowborder" valign="top" width="17%" headers="mcps1.2.3.1.1 "><p id="p184411618728"><a name="p184411618728"></a><a name="p184411618728"></a>子网</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="83%" headers="mcps1.2.3.1.2 "><p id="p1515573018728"><a name="p1515573018728"></a><a name="p1515573018728"></a>子网名称与IP地址段。</p>
-    </td>
-    </tr>
-    <tr id="row196181012465"><td class="cellrowborder" valign="top" width="17%" headers="mcps1.2.3.1.1 "><p id="p49541115154613"><a name="p49541115154613"></a><a name="p49541115154613"></a>安全组</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="83%" headers="mcps1.2.3.1.2 "><p id="p395471584614"><a name="p395471584614"></a><a name="p395471584614"></a>已创建的安全组。</p>
-    <p id="p35999277569"><a name="p35999277569"></a><a name="p35999277569"></a>安全组是一组对弹性云服务器的访问规则的集合，为同一个VPC内具有相同安全保护需求并相互信任的弹性云服务器提供访问策略。</p>
-    </td>
-    </tr>
-    <tr id="row18591615105213"><td class="cellrowborder" valign="top" width="17%" headers="mcps1.2.3.1.1 "><p id="p2860415105211"><a name="p2860415105211"></a><a name="p2860415105211"></a>用户名</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="83%" headers="mcps1.2.3.1.2 "><p id="p31871344145714"><a name="p31871344145714"></a><a name="p31871344145714"></a>连接IMDG实例的用户名。</p>
-    <a name="ul3930103195714"></a><a name="ul3930103195714"></a><ul id="ul3930103195714"><li>名称不能为空。</li><li>只能以英文字母开头。</li><li>长度为1到64位的字符串。</li><li>仅包含英文字母、数字和中划线（-）。</li></ul>
-    </td>
-    </tr>
-    <tr id="row6515734618728"><td class="cellrowborder" valign="top" width="17%" headers="mcps1.2.3.1.1 "><p id="p3400959418728"><a name="p3400959418728"></a><a name="p3400959418728"></a>密码</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="83%" headers="mcps1.2.3.1.2 "><p id="p204469959544"><a name="p204469959544"></a><a name="p204469959544"></a>连接IMDG实例的密码。包括密码及确认密码。</p>
-    <div class="note" id="note14021145182415"><a name="note14021145182415"></a><a name="note14021145182415"></a><span class="notetitle"> 说明： </span><div class="notebody"><p id="p178451546112414"><a name="p178451546112414"></a><a name="p178451546112414"></a>DCS服务出于安全考虑，在密码访问模式下，连接IMDG实例时，需要先进行密码认证。请妥善保存密码，并定期更新密码。</p>
-    </div></div>
-    <p id="p55321553302"><a name="p55321553302"></a><a name="p55321553302"></a>IMDG实例密码必须满足以下复杂度要求：</p>
-    <a name="ul135351531503"></a><a name="ul135351531503"></a><ul id="ul135351531503"><li>密码不能为空。</li><li>密码不能与用户名或倒序的用户名相同。</li><li>输入长度为6到32位的字符串。</li><li>必须包含如下四种字符中的两种组合：<a name="ul1454195314011"></a><a name="ul1454195314011"></a><ul id="ul1454195314011"><li>小写字母</li><li>大写字母</li><li>数字</li><li>特殊字符包括（`~!@#$^&amp;*()-_=+\|{}:,&lt;.&gt;/?）</li></ul>
-    </li></ul>
-    </td>
-    </tr>
-    <tr id="row175574015417"><td class="cellrowborder" valign="top" width="17%" headers="mcps1.2.3.1.1 "><p id="p185589055411"><a name="p185589055411"></a><a name="p185589055411"></a>时间窗</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="83%" headers="mcps1.2.3.1.2 "><p id="p2558130125418"><a name="p2558130125418"></a><a name="p2558130125418"></a>运维操作时间。</p>
-    <p id="p538867566"><a name="p538867566"></a><a name="p538867566"></a>用户可选择22:00-02:00、02:00-06:00、06:00-10:00、10:00-14:00、14:00-18:00和18:00-22:00，在选择的时间段内，服务运维可对实例节点进行维护操作。</p>
-    </td>
-    </tr>
-    </tbody>
-    </table>
+6.  在“区域”下拉列表中，选择靠近您应用程序的区域，可降低网络延时、提高访问速度。
+7.  设置实例的“名称”和“描述”。
 
-7.  填写完上述信息后，单击“立即购买”，进入确认页面。
-8.  确认实例信息无误后，提交请求，开始创建实例。
-9.  缓存实例创建成功后，用户可以在“缓存管理”页面，查看并管理自己的缓存实例。
+    实例的名称，必须符合以下要求：
+
+    -   名称不能为空。
+    -   只能以英文字母开头。
+    -   名称长度为4到64位的字符串。
+    -   仅包含英文字母、数字、下划线（\_）和中划线（-）。
+
+8.  根据购买前的[准备工作](#section1262819220505)，设置以下基本信息；
+    1.  在“缓存类型”区域，选择缓存类型。
+
+        本章节单击选择“IMDG”。
+
+    2.  在“实例类型”区域，选择实例类型。
+
+        IMDG只支持“单机”和“集群”实例类型。
+
+    3.  在“可用区”区域，您可根据实际情况选择。
+
+        如果提高访问速度，可选择和应用同一个可用区；如果提高可靠性，可选择和应用不在同一个可用区。
+
+    4.  在“实例规格”区域，选择符合您的规格。
+
+        默认配额请以控制台显示为准。
+
+        如需增加配额，单击规格下方的“申请扩大配额”，即可跳转到工单管理界面提交工单，增加配额。
+
+        配置的实例基本信息，如[图1](#fig442343421020)所示。
+
+        **图 1**  购买IMDG实例<a name="fig442343421020"></a>  
+        ![](figures/购买IMDG实例.png "购买IMDG实例")
+
+
+9.  设置实例网络环境信息。
+    1.  在“虚拟私有云”下拉列表，选择已经创建好的虚拟私有云。
+        -   虚拟私有云可以为您的IMDG实例构建隔离的、您可以自主配置和管理的虚拟网络环境。
+        -   可单击右侧的“查看虚拟私有云”，系统跳转到虚拟私有云界面，选择相应的虚拟私有云，可以查看安全组的出方向规则和入方向规则。
+
+    2.  在“子网”下拉列表，选择已经创建好的子网。
+
+        您可以单击右侧的“查看子网”，系统跳转到网络控制台页面，查看对应子网的私有IP地址等信息。
+
+    3.  在“安全组”下拉列表，可以选择已经创建好的安全组。
+
+        安全组是一组对弹性云服务器的访问规则的集合，为同一个VPC内具有相同安全保护需求并相互信任的弹性云服务器提供访问策略。
+
+        **图 2**  购买IMDG时设置网络环境信息<a name="fig1109143233017"></a>  
+        ![](figures/购买IMDG时设置网络环境信息.png "购买IMDG时设置网络环境信息")
+
+
+10. 设置实例访问用户名和密码。
+    -   “用户名”：连接IMDG实例的用户名。
+        -   名称不能为空。
+        -   只能以英文字母开头。
+        -   长度为1到64位的字符串。
+        -   仅包含英文字母、数字、下划线（\_）和中划线（-）。
+
+    -   “密码”和“确认密码”：表示连接IMDG实例的密码。
+
+        >![](public_sys-resources/icon-note.gif) **说明：**   
+        >DCS服务出于安全考虑，在密码访问模式下，连接使用IMDG实例时，需要先进行密码认证。请妥善保存密码，并定期更新密码。  
+
+        IMDG实例密码复杂度要求，请参考[DCS账号密码规范](https://support.huaweicloud.com/dcs_faq/dcs-zh-ug-190228001.html)。
+
+
+11. 设置实例维护时间窗。
+
+    您可以设置华为服务运维对实例进行维护的时间，可选择22:00-02:00、02:00-06:00、06:00-10:00、10:00-14:00、14:00-18:00和18:00-22:00，在选择的时间段内，则可对实例节点进行维护操作。
+
+12. 确定实例的信息和“配置费用”后，单击“立即购买”，进入确认页面。
+
+    页面显示申请的分布式缓存服务的实例名称、缓存版本和实例规格等信息。
+
+13. 确认实例信息无误后，提交请求，开始创建实例。
+14. 缓存实例创建成功后，您可以在“缓存管理”页面，查看并管理自己的缓存实例。
     1.  创建缓存实例大约需要5到15分钟，如果创建集群实例，则需要大约30分钟。
     2.  缓存实例创建成功后，默认“状态”为“运行中”。
     3.  如果创建缓存实例失败，可参考[删除缓存实例](删除缓存实例.md)，删除创建失败的缓存实例，然后重新购买。如果重新申请仍然失败，请联系客服。
 
+
+## 使用API方式购买实例<a name="section51851329174119"></a>
+
+除了可以在控制台购买实例，您还可以使用API的方式购买缓存实例，具体操作请查看以下链接。
+
+[使用API创建缓存实例](https://support.huaweicloud.com/api-dcs/dcs-zh-api-180423019.html)
+
+## 有关购买IMDG实例的常见问题<a name="section111896208475"></a>
+
+-   [什么场景下选择IMDG数据库？](https://support.huaweicloud.com/dcs_faq/zh-cn_topic_0091565969.html)
+-   [创建DCS实例时页面为什么无法自动获取子网和安全组等信息？](https://support.huaweicloud.com/dcs_faq/dcs-zh-ug-180703001.html)
+-   [如何选择和配置安全组](https://support.huaweicloud.com/dcs_faq/zh-cn_topic_0082442607.html)
+-   [DCS实例是否支持跨AZ？跨AZ有什么影响？](https://support.huaweicloud.com/dcs_faq/dcs-zh-ug-190117012.html)
 
 ## 相关产品及文档<a name="section6598122311256"></a>
 

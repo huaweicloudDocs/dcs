@@ -2,7 +2,7 @@
 
 Redis客户端可通过公网连接Redis实例。该功能便于开发人员在本地搭建开发或测试环境，提高开发效率。生产环境（正式环境）中，请通过VPC内连接方式访问Redis实例，保障访问效率。
 
-本节介绍如何搭建一个本地环境与Redis实例间的网络通道，以Redis-cli为例演示通过公网连接Redis实例。更多的客户端的使用方法，请参考[https://redis.io/clients](https://redis.io/clients)。
+本节介绍如何搭建一个本地环境与Redis实例间的网络通道，以Redis-cli为例演示通过公网连接Redis实例。更多的客户端的使用方法，请参考[https://redis.io/clients](https://redis.io/clients)
 
 ## 前提条件<a name="section1502270695932"></a>
 
@@ -229,6 +229,11 @@ Redis客户端可通过公网连接Redis实例。该功能便于开发人员在�
         ```
 
 
+
+## 公网连接实例的常见问题<a name="section19283234156"></a>
+
+-   [DCS支持公网访问吗？](https://support.huaweicloud.com/dcs_faq/zh-cn_topic_0033568440.html)
+-   [本地环境是否可以连接缓存实例？](https://support.huaweicloud.com/dcs_faq/zh-cn_topic_0082407407.html)
 
 ## 相关产品及文档<a name="section152613113129"></a>
 

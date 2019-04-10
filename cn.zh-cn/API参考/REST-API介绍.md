@@ -1,63 +1,24 @@
 # REST API介绍<a name="ZH-CN_TOPIC_0107752340"></a>
 
-API符合RESTful API的设计理论。
+分布式缓存服务API符合RESTful API的设计理论。
 
 REST从资源的角度来观察整个网络，提供创建、查询、更新、删掉等方法访问服务的资源。
 
 REST API请求/响应对可以分为如下部分：
 
--   请求URI
--   请求方法
--   请求消息头
--   请求消息体
--   响应消息头
--   响应消息体
-
-## 请求URI<a name="section1849899574"></a>
-
-请求URI由如下部分组成。
-
-**\{URI-scheme\} :// \{**Endpoint**\} / \{resource-path\} ? \{query-string\}**
-
-尽管请求URI包含在请求消息头中，但大多数语言或框架都要求您从请求消息中单独传递它，所以在此单独描述。
-
-**表 1**  URI中的参数说明
-
-<a name="t1797260c744a4e1a85d354f259cae55a"></a>
-<table><thead align="left"><tr id="r6dceed05bcc649d2b032accbb2980a31"><th class="cellrowborder" valign="top" width="24.529999999999998%" id="mcps1.2.3.1.1"><p id="a3446b6b785cb432bae9f45aef9177041"><a name="a3446b6b785cb432bae9f45aef9177041"></a><a name="a3446b6b785cb432bae9f45aef9177041"></a>参数</p>
-</th>
-<th class="cellrowborder" valign="top" width="75.47%" id="mcps1.2.3.1.2"><p id="abe71244a12ac45308e99d4bbf975a9f8"><a name="abe71244a12ac45308e99d4bbf975a9f8"></a><a name="abe71244a12ac45308e99d4bbf975a9f8"></a>描述</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row106982018513"><td class="cellrowborder" valign="top" width="24.529999999999998%" headers="mcps1.2.3.1.1 "><p id="p136991001517"><a name="p136991001517"></a><a name="p136991001517"></a>URI-scheme</p>
-</td>
-<td class="cellrowborder" valign="top" width="75.47%" headers="mcps1.2.3.1.2 "><p id="p56992017520"><a name="p56992017520"></a><a name="p56992017520"></a>表示用于传输请求的协议。</p>
-</td>
-</tr>
-<tr id="rb217758afff146a1b40b0dcbb28a4ae1"><td class="cellrowborder" valign="top" width="24.529999999999998%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0035614179_p480227019422"><a name="zh-cn_topic_0035614179_p480227019422"></a><a name="zh-cn_topic_0035614179_p480227019422"></a>Endpoint</p>
-</td>
-<td class="cellrowborder" valign="top" width="75.47%" headers="mcps1.2.3.1.2 "><p id="p1780595345416"><a name="p1780595345416"></a><a name="p1780595345416"></a>指定承载REST服务端点的服务器域名或IP，从<a href="http://developer.huaweicloud.com/endpoint.html" target="_blank" rel="noopener noreferrer">地区和终端节点</a>中获取。</p>
-</td>
-</tr>
-<tr id="refeed61892004ea682639be281a1a707"><td class="cellrowborder" valign="top" width="24.529999999999998%" headers="mcps1.2.3.1.1 "><p id="p1797614317513"><a name="p1797614317513"></a><a name="p1797614317513"></a>resource-path</p>
-</td>
-<td class="cellrowborder" valign="top" width="75.47%" headers="mcps1.2.3.1.2 "><p id="a90409cbb8b1c49c4ad4d3cfee16f475e"><a name="a90409cbb8b1c49c4ad4d3cfee16f475e"></a><a name="a90409cbb8b1c49c4ad4d3cfee16f475e"></a>资源路径，也即API访问路径。从具体接口的URI模块获取，例如“v3/auth/tokens”。</p>
-</td>
-</tr>
-<tr id="row19939365518"><td class="cellrowborder" valign="top" width="24.529999999999998%" headers="mcps1.2.3.1.1 "><p id="p393966455"><a name="p393966455"></a><a name="p393966455"></a>Query string</p>
-</td>
-<td class="cellrowborder" valign="top" width="75.47%" headers="mcps1.2.3.1.2 "><p id="p159401867517"><a name="p159401867517"></a><a name="p159401867517"></a>可选参数，例如API版本或资源选择标准。</p>
-</td>
-</tr>
-</tbody>
-</table>
+-   [请求方法](#section580035055419)
+-   [请求URI](#section1849899574)
+-   [请求消息头](#section1454211155819)
+-   [请求消息体（可选）](#section14612192315587)
+-   [响应消息头](#section7804143005810)
+-   [响应消息体（可选）](#section034615592583)
+-   [发起请求](#section140743661613)
 
 ## 请求方法<a name="section580035055419"></a>
 
 HTTP方法（也称为操作或动词），它告诉服务你正在请求什么类型的操作。 
 
-**表 2**  HTTP方法
+**表 1**  HTTP方法
 
 <a name="table26515221161"></a>
 <table><thead align="left"><tr id="row10728192251616"><th class="cellrowborder" valign="top" width="18%" id="mcps1.2.3.1.1"><p id="p157281422201616"><a name="p157281422201616"></a><a name="p157281422201616"></a>方法</p>
@@ -100,6 +61,46 @@ HTTP方法（也称为操作或动词），它告诉服务你正在请求什么�
 </tbody>
 </table>
 
+## 请求URI<a name="section1849899574"></a>
+
+请求URI由如下部分组成。
+
+**\{URI-scheme\} :// \{**Endpoint**\} / \{resource-path\} ? \{query-string\}**
+
+尽管请求URI包含在请求消息头中，但大多数语言或框架都要求您从请求消息中单独传递它，所以在此单独描述。
+
+**表 2**  URI中的参数说明
+
+<a name="t1797260c744a4e1a85d354f259cae55a"></a>
+<table><thead align="left"><tr id="r6dceed05bcc649d2b032accbb2980a31"><th class="cellrowborder" valign="top" width="24.529999999999998%" id="mcps1.2.3.1.1"><p id="a3446b6b785cb432bae9f45aef9177041"><a name="a3446b6b785cb432bae9f45aef9177041"></a><a name="a3446b6b785cb432bae9f45aef9177041"></a>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="75.47%" id="mcps1.2.3.1.2"><p id="abe71244a12ac45308e99d4bbf975a9f8"><a name="abe71244a12ac45308e99d4bbf975a9f8"></a><a name="abe71244a12ac45308e99d4bbf975a9f8"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row106982018513"><td class="cellrowborder" valign="top" width="24.529999999999998%" headers="mcps1.2.3.1.1 "><p id="p136991001517"><a name="p136991001517"></a><a name="p136991001517"></a>URI-scheme</p>
+</td>
+<td class="cellrowborder" valign="top" width="75.47%" headers="mcps1.2.3.1.2 "><p id="p56992017520"><a name="p56992017520"></a><a name="p56992017520"></a>表示用于传输请求的协议。具体的协议，可以在<a href="http://developer.huaweicloud.com/endpoint.html" target="_blank" rel="noopener noreferrer">地区和终端节点</a>的“协议类型”获取。</p>
+</td>
+</tr>
+<tr id="rb217758afff146a1b40b0dcbb28a4ae1"><td class="cellrowborder" valign="top" width="24.529999999999998%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0035614179_p480227019422"><a name="zh-cn_topic_0035614179_p480227019422"></a><a name="zh-cn_topic_0035614179_p480227019422"></a>Endpoint</p>
+</td>
+<td class="cellrowborder" valign="top" width="75.47%" headers="mcps1.2.3.1.2 "><p id="p1780595345416"><a name="p1780595345416"></a><a name="p1780595345416"></a>指定承载REST服务端点的服务器域名或IP，从<a href="http://developer.huaweicloud.com/endpoint.html" target="_blank" rel="noopener noreferrer">地区和终端节点</a>中获取。</p>
+</td>
+</tr>
+<tr id="refeed61892004ea682639be281a1a707"><td class="cellrowborder" valign="top" width="24.529999999999998%" headers="mcps1.2.3.1.1 "><p id="p1797614317513"><a name="p1797614317513"></a><a name="p1797614317513"></a>resource-path</p>
+</td>
+<td class="cellrowborder" valign="top" width="75.47%" headers="mcps1.2.3.1.2 "><p id="a90409cbb8b1c49c4ad4d3cfee16f475e"><a name="a90409cbb8b1c49c4ad4d3cfee16f475e"></a><a name="a90409cbb8b1c49c4ad4d3cfee16f475e"></a>资源路径，也即API访问路径。从具体接口的URI模块获取，例如“v3/auth/tokens”。</p>
+</td>
+</tr>
+<tr id="row19939365518"><td class="cellrowborder" valign="top" width="24.529999999999998%" headers="mcps1.2.3.1.1 "><p id="p393966455"><a name="p393966455"></a><a name="p393966455"></a>Query string</p>
+</td>
+<td class="cellrowborder" valign="top" width="75.47%" headers="mcps1.2.3.1.2 "><p id="p159401867517"><a name="p159401867517"></a><a name="p159401867517"></a>可选参数，例如API版本或资源选择标准。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## 请求消息头<a name="section1454211155819"></a>
 
 可选的附加请求头字段，如指定的URI和HTTP方法所要求的字段。详细的公共请求消息头字段请参见[表3](#t24b12299374a4f4ba9fbf5880aec2658)，其中请求认证信息根据认证方式请参见[Token认证](Token认证.md)或[AK/SK认证](AK-SK认证.md)。 
@@ -128,10 +129,9 @@ HTTP方法（也称为操作或动词），它告诉服务你正在请求什么�
 </tr>
 <tr id="r48b466a7608e4d6eb042a35f56cbdfb8"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0035614236_p792363911913"><a name="zh-cn_topic_0035614236_p792363911913"></a><a name="zh-cn_topic_0035614236_p792363911913"></a>X-Auth-Token</p>
 </td>
-<td class="cellrowborder" valign="top" width="23%" headers="mcps1.2.5.1.2 "><p id="p3237430121524"><a name="p3237430121524"></a><a name="p3237430121524"></a>Token认证信息，通</p>
-<p id="p2293325721524"><a name="p2293325721524"></a><a name="p2293325721524"></a>过<a href="Token认证.md">Token认证</a>获取。</p>
+<td class="cellrowborder" valign="top" width="23%" headers="mcps1.2.5.1.2 "><p id="p3237430121524"><a name="p3237430121524"></a><a name="p3237430121524"></a>Token认证信息，通过<a href="Token认证.md">Token认证</a>获取。</p>
 </td>
-<td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.3 "><p id="a1f6108d2189d4cd09376eebef87bb335"><a name="a1f6108d2189d4cd09376eebef87bb335"></a><a name="a1f6108d2189d4cd09376eebef87bb335"></a>当使用Token方式认证时，必须填充该字段。</p>
+<td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.3 "><p id="a1f6108d2189d4cd09376eebef87bb335"><a name="a1f6108d2189d4cd09376eebef87bb335"></a><a name="a1f6108d2189d4cd09376eebef87bb335"></a>当使用Token方式认证时，必须填该字段。</p>
 </td>
 <td class="cellrowborder" valign="top" width="34%" headers="mcps1.2.5.1.4 "><p id="a993f118dde7d4c2f9164d578e9bc8c13"><a name="a993f118dde7d4c2f9164d578e9bc8c13"></a><a name="a993f118dde7d4c2f9164d578e9bc8c13"></a>-</p>
 </td>
@@ -156,7 +156,7 @@ HTTP方法（也称为操作或动词），它告诉服务你正在请求什么�
 <p id="p202219192194"><a name="p202219192194"></a><a name="p202219192194"></a>nection;contenttype;host;x-sdk-date,Signature=7972cc9145876d174b386218</p>
 <p id="p17922872194"><a name="p17922872194"></a><a name="p17922872194"></a>8a0f61819431fa71c8a8a060809ea8b898</p>
 <p id="p109575352194"><a name="p109575352194"></a><a name="p109575352194"></a>e3eaa9</p>
-<p id="p315089562194"><a name="p315089562194"></a><a name="p315089562194"></a>Host:dcs.cn-north-1.myhuaweicloud.com</p>
+<p id="p315089562194"><a name="p315089562194"></a><a name="p315089562194"></a>Host:dcs.cn-north-1.xxx.com</p>
 <p id="p20886442194"><a name="p20886442194"></a><a name="p20886442194"></a></p>
 </td>
 </tr>
@@ -173,7 +173,7 @@ HTTP方法（也称为操作或动词），它告诉服务你正在请求什么�
 </td>
 <td class="cellrowborder" valign="top" width="23%" headers="mcps1.2.5.1.2 "><p id="p18533459182516"><a name="p18533459182516"></a><a name="p18533459182516"></a>账号ID</p>
 </td>
-<td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.3 "><p id="p14821740144110"><a name="p14821740144110"></a><a name="p14821740144110"></a>否，在调用全局服务接口时必须填写该字段。</p>
+<td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.5.1.3 "><p id="p14821740144110"><a name="p14821740144110"></a><a name="p14821740144110"></a>在调用全局服务接口时必须填写该字段。</p>
 </td>
 <td class="cellrowborder" valign="top" width="34%" headers="mcps1.2.5.1.4 "><p id="p9534205942518"><a name="p9534205942518"></a><a name="p9534205942518"></a>-</p>
 </td>
@@ -253,6 +253,6 @@ HTTP方法（也称为操作或动词），它告诉服务你正在请求什么�
 
 -   REST客户端
 
-    Mozilla、Google都为REST提供了图形化的浏览器插件，发送处理请求消息。如果浏览器是Firefox，请参见[Firefox REST Client](https://addons.mozilla.org/en-US/firefox/addon/restclient/)。如果浏览器是Chrome，请参见[Postman Interceptor](https://chrome.google.com/webstore/detail/postman-interceptor/aicmkgpgakddgnaphhhpliifpcfhicfo/)。
+    Mozilla、Google都为REST提供了图形化的浏览器插件，发送处理请求消息。如果浏览器是Firefox，请参见[Firefox REST Client](https://addons.mozilla.org/en-US/firefox/addon/restclient/)。如果浏览器是Chrome，请参见[Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop)。
 
 

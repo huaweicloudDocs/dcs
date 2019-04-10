@@ -27,7 +27,7 @@
 
     安装完后可查看版本号，确认成功安装：
 
-    **php -version**
+    **php --version**
 
 5.  安装php redis客户端。
     1.  下载php redis源文件。
@@ -69,7 +69,8 @@
         ```
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
-        >redis.so文件的目录可能不同，需要先查找确认该文件的目录。  
+        >php.ini和redis.so两个文件的目录可能不同，需要先查找确认。  
+        >例如：**find / -name php.ini**  
 
     7.  保存退出后确认扩展生效。
 
@@ -98,11 +99,11 @@
             }
             $value = $redis->get("welcome");
             echo $value;
-            $redis->quit();
+            $redis->close();
         ?>
         ```
 
-        其中，**\{redis\_instance\_address\}**为Redis实例的IP地址/域名，“6379“为Redis实例的端口。IP地址/域名和端口获取见步骤[1](#li8233164074413)，请按实际情况修改后执行。\{password\}为创建Redis实例时自定义的密码，请按实际情况修改后执行。
+        其中，**\{redis\_instance\_address\}**为Redis实例的IP地址/域名，“6379“为Redis实例的端口。IP地址/域名和端口获取见步骤[1](#li8233164074413)，请按实际情况修改后执行。\{password\}为创建Redis实例时自定义的密码，请按实际情况修改后执行。如果免密访问，请将密码认证的if语句屏蔽。
 
     2.  执行 php redis.php，连接Redis实例。
 

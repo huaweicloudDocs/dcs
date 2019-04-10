@@ -19,7 +19,7 @@
 
 3.  确定要购买的缓存实例类型，即实例架构。
 
-    确定缓存类型后，需要明确实例类型。实例规格特点和架构，可参考[选择实例架构](https://support.huaweicloud.com/productdesc-dcs/CacheSingleNode.html)。
+    确定缓存类型后，需要明确实例架构。实例规格特点和架构，可参考[选择实例架构](https://support.huaweicloud.com/productdesc-dcs/CacheSingleNode.html)。
 
 4.  确定实例规格。
 

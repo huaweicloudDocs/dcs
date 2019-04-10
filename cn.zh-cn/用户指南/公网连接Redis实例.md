@@ -2,7 +2,7 @@
 
 Redis客户端可通过公网连接Redis实例。该功能便于开发人员在本地搭建开发或测试环境，提高开发效率。生产环境（正式环境）中，请通过VPC内连接方式访问Redis实例，保障访问效率。
 
-本节介绍如何搭建一个本地环境与Redis实例间的网络通道，以Redis-cli为例演示通过公网连接Redis实例。更多的客户端的使用方法，请参考[https://redis.io/clients](https://redis.io/clients)
+本节介绍如何搭建一个本地环境与Redis实例间的网络通道，以Redis-cli为例演示通过公网连接Redis实例。
 
 ## 前提条件<a name="section1502270695932"></a>
 
@@ -11,7 +11,14 @@ Redis客户端可通过公网连接Redis实例。该功能便于开发人员在�
 -   已成功申请密码模式的Redis实例，且状态为“运行中”。
 -   Redis实例已开启公网访问功能，具体可参考[开启Redis实例的公网访问](开启Redis实例的公网访问.md)。
 -   如果访问Redis实例需要使用证书，可根据[查看缓存实例信息](查看缓存实例信息.md)，进入到缓存实例详情页面提前下载该证书。
--   Redis实例安全组需要配置了正确的规则（允许36379端口被外部地址访问），客户端才能正常连接Redis实例。具体请参考[如何选择和配置安全组？](https://support.huaweicloud.com/dcs_faq/zh-cn_topic_0082442607.html)。
+-   Redis实例安全组需要配置了正确的规则，客户端才能正常连接Redis实例。
+
+    SSL加密功能开启时，允许36379端口被外部地址访问；SSL加密功能关闭时，允许6379端口被外部地址访问。具体请参考[如何选择和配置安全组？](https://support.huaweicloud.com/dcs_faq/zh-cn_topic_0082442607.html)。
+
+    >![](public_sys-resources/icon-notice.gif) **注意：**   
+    >以下说明为**开启SSL加密功能**的公网访问场景。  
+    >如果实例开启了公网访问，但关闭了SSL加密，则不需要参考下文安装Stunnel客户端。为Redis实例的安全组放开6379端口访问后，即可直接访问Redis的公网地址。  
+
 
 ## Stunnel客户端安装配置（Windows版）<a name="section1280845895932"></a>
 

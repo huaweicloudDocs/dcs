@@ -1,6 +1,6 @@
 # 通过WebCli连接Redis 4.x和5.x实例<a name="dcs-zh-ug-180712002"></a>
 
-DCS支持通过管理控制台的WebCli功能连接DCS2.0Redis 4.x和Redis 5.x实例。只有Redis 4.x和Redis 5.x实例支持该操作。
+DCS支持通过管理控制台的WebCli功能连接Redis 4.x和Redis 5.x实例。只有Redis 4.x和Redis 5.x实例支持该操作。
 
 >![](public_sys-resources/icon-note.gif) **说明：**   
 >-   本操作仅部分region支持，请以控制台为准。  

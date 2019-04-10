@@ -525,6 +525,9 @@ Telnet客户端只支持连接免密访问模式下的Memcached实例，此时�
 
     **yum install php-devel php-common php-cli**
 
+    >![](public_sys-resources/icon-notice.gif) **注意：**   
+    >php7.x对SASL认证存在兼容问题，建议使用php 5.6版本。如果yum源提供的php不是5.6版本，请自行在网上查找下载源。  
+
 5.  安装memcached客户端。
 
     注意运行configure配置安装时，增加开启sasl参数。

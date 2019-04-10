@@ -1,49 +1,6 @@
 # 购买Redis实例<a name="dcs-zh-ug-180315001"></a>
 
-您可以根据业务需要购买相应计算能力和存储空间的Redis实例，同时可购买多个Redis实例。当前支持的Redis版本和计费模式关系如[表1](#table09027251124)所示。
-
-**表 1**  Redis版本和计费模式说明
-
-<a name="table09027251124"></a>
-<table><thead align="left"><tr id="row990317250218"><th class="cellrowborder" valign="top" width="14.04%" id="mcps1.2.4.1.1"><p id="p19268133112413"><a name="p19268133112413"></a><a name="p19268133112413"></a>产品类型</p>
-</th>
-<th class="cellrowborder" valign="top" width="39.72%" id="mcps1.2.4.1.2"><p id="p129031825323"><a name="p129031825323"></a><a name="p129031825323"></a>Redis版本</p>
-</th>
-<th class="cellrowborder" valign="top" width="46.239999999999995%" id="mcps1.2.4.1.3"><p id="p209037251424"><a name="p209037251424"></a><a name="p209037251424"></a>支持的计费模式</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row179037254215"><td class="cellrowborder" rowspan="3" valign="top" width="14.04%" headers="mcps1.2.4.1.1 "><p id="p142682310414"><a name="p142682310414"></a><a name="p142682310414"></a>标准版</p>
-</td>
-<td class="cellrowborder" valign="top" width="39.72%" headers="mcps1.2.4.1.2 "><p id="p1879063453110"><a name="p1879063453110"></a><a name="p1879063453110"></a>Redis 3.x</p>
-</td>
-<td class="cellrowborder" valign="top" width="46.239999999999995%" headers="mcps1.2.4.1.3 "><a name="ul7602174416317"></a><a name="ul7602174416317"></a><ul id="ul7602174416317"><li>包年包月</li><li>按需付费</li></ul>
-</td>
-</tr>
-<tr id="row15551184315"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p46905376364"><a name="p46905376364"></a><a name="p46905376364"></a>Redis 4.x</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><p id="p5551281315"><a name="p5551281315"></a><a name="p5551281315"></a>按需付费</p>
-</td>
-</tr>
-<tr id="row77521923143611"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p3533143215366"><a name="p3533143215366"></a><a name="p3533143215366"></a>Redis 5.x</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><p id="p106121241133617"><a name="p106121241133617"></a><a name="p106121241133617"></a>按需付费</p>
-</td>
-</tr>
-<tr id="row14903725428"><td class="cellrowborder" rowspan="2" valign="top" width="14.04%" headers="mcps1.2.4.1.1 "><p id="p189991571710"><a name="p189991571710"></a><a name="p189991571710"></a>高性能版</p>
-</td>
-<td class="cellrowborder" valign="top" width="39.72%" headers="mcps1.2.4.1.2 "><p id="p02881906315"><a name="p02881906315"></a><a name="p02881906315"></a>Redis 4.x</p>
-</td>
-<td class="cellrowborder" valign="top" width="46.239999999999995%" headers="mcps1.2.4.1.3 "><p id="p55515589911"><a name="p55515589911"></a><a name="p55515589911"></a>按需付费</p>
-</td>
-</tr>
-<tr id="row1590310251526"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p19850811033"><a name="p19850811033"></a><a name="p19850811033"></a>Redis 5.x</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><p id="p109034255216"><a name="p109034255216"></a><a name="p109034255216"></a>按需付费</p>
-</td>
-</tr>
-</tbody>
-</table>
+您可以根据业务需要购买相应计算能力和存储空间的Redis实例，同时可购买多个Redis实例。
 
 >![](public_sys-resources/icon-note.gif) **说明：**   
 >高性能版目前仅“华北-北京一”region支持，其他region暂未支持。  
@@ -103,7 +60,6 @@
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
     >此处请选择与您的应用服务相同的区域。  
-    >。  
 
 3.  单击“购买缓存实例”，进入购买页面。
 4.  选择“计费模式”。单击选择“包年/包月”或者“按需付费”。
@@ -139,6 +95,11 @@
         当前DCS支持的Redis版本有：3.x、4.x和5.x。
 
     4.  在“实例类型”区域，选择单机或主备或集群实例类型。
+
+        >![](public_sys-resources/icon-note.gif) **说明：**   
+        >-   如果是Redis3.x实例，实例类型为“单机”、“主备”、“Proxy集群”。  
+        >-   如果是Redis4.x和Redis5.x实例，实例类型为“单机”、“主备”、“Redis Cluster集群”。  
+
     5.  在“可用区”区域，您可根据实际情况选择。
 
         >![](public_sys-resources/icon-note.gif) **说明：**   
@@ -169,14 +130,14 @@
 
         您可以单击右侧的“查看子网”，系统跳转到网络控制台页面，查看对应子网的私有IP地址等信息。
 
-    3.  （可选）在“IP地址”区域，您可以选择“自动分配”和“手动指定”。
+    3.  在“IP地址”区域，您可以选择“自动分配”和“手动指定”。
 
         当选择的Reids版本为4.x或5.x，页面不显示该参数，只有Redis版本为3.x时才需要设置实例“IP地址”。
 
         -   “自动分配”：系统随机分配当前子网下的可用IP。
         -   “手动指定”：选择该项，系统会显示一个输入IP地址输入框，您可以自己输入一个在当前子网下可用的IP，同时，也可以单击右侧的“查看已使用的IP地址”，系统弹出“查看已使用的IP地址”页面，您可以查看当前子网下的IP使用情况。
 
-    4.  （可选）在“安全组”下拉列表，可以选择已经创建好的安全组。
+    4.  在“安全组”下拉列表，可以选择已经创建好的安全组。
 
         当选择的Reids版本为4.x或5.x，页面不显示该参数，只有Redis版本为3.x时才需要设置实例“安全组”。
 

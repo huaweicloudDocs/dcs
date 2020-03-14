@@ -82,7 +82,7 @@
         >![](public_sys-resources/icon-note.gif) **说明：**   
         >DCS服务出于安全考虑，在密码访问模式下，连接使用Memcached实例时，需要先进行密码认证。请妥善保存密码，并定期更新密码。  
 
-        Memcached实例密码复杂度要求，请参考[DCS账号密码规范](https://support.huaweicloud.com/dcs_faq/dcs-zh-ug-190228001.html)。
+        Memcached实例密码复杂度要求，请参考[DCS账号密码规范](https://support.huaweicloud.com/dcs_faq/dcs-faq-0312004.html)。
 
 10. 设置实例购买时长和数量。
 11. 单击“更多配置”，设置实例其他信息，包括备份恢复策略、实例标签等配置。
@@ -117,10 +117,4 @@
     1.  创建缓存实例大约需要5到15分钟。
     2.  缓存实例创建成功后，默认“状态”为“运行中”。
 
-
-## 使用API方式购买实例<a name="section31420598403"></a>
-
-除了可以在控制台购买实例，您还可以使用API的方式购买缓存实例，具体操作请查看以下链接。
-
-[使用API创建缓存实例](https://support.huaweicloud.com/api-dcs/dcs-zh-api-180423019.html)
 

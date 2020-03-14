@@ -1,4 +1,4 @@
-# DCS API参考
+# DCS API参考 for HEC
 
 -   [使用前必读]
     -   [概述](概述.md)

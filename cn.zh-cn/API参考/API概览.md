@@ -19,9 +19,14 @@
 <td class="cellrowborder" valign="top" width="65%" headers="mcps1.2.3.1.2 "><p id="p1836118151518"><a name="p1836118151518"></a><a name="p1836118151518"></a>分布式缓存实例的日常维护类接口，包括查询实例的统计信息、查询或修改实例配置参数、修改密码、备份恢复等接口。</p>
 </td>
 </tr>
+<tr id="row19848548175416"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.2.3.1.1 "><p id="p198491448175415"><a name="p198491448175415"></a><a name="p198491448175415"></a><a href="缓存实例标签管理类接口.md">缓存实例标签管理类接口</a></p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.2.3.1.2 "><p id="p7850448125419"><a name="p7850448125419"></a><a name="p7850448125419"></a>用户管理实例标签的接口，包括为实例添加标签、删除标签、查询标签以及查询租户所有标签。</p>
+</td>
+</tr>
 <tr id="row1980621151411"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.2.3.1.1 "><p id="p53431927124713"><a name="p53431927124713"></a><a name="p53431927124713"></a><a href="租户管理类接口.md">租户管理类接口</a></p>
 </td>
-<td class="cellrowborder" valign="top" width="65%" headers="mcps1.2.3.1.2 "><p id="p178077117141"><a name="p178077117141"></a><a name="p178077117141"></a>租户用于管理分布式缓存服务的相关接口，包括查询实例列表以及租户配额接口。</p>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.2.3.1.2 "><p id="p178077117141"><a name="p178077117141"></a><a name="p178077117141"></a>租户用于管理分布式缓存服务的相关接口，包括查询租户配额接口。</p>
 </td>
 </tr>
 <tr id="row17941818161515"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.2.3.1.1 "><p id="p1051015555473"><a name="p1051015555473"></a><a name="p1051015555473"></a><a href="其他接口.md">其他接口</a></p>
@@ -45,7 +50,7 @@
 </thead>
 <tbody><tr id="row08723421515"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.2.3.1.1 "><p id="p178724421156"><a name="p178724421156"></a><a name="p178724421156"></a><a href="创建缓存实例.md">创建缓存实例</a></p>
 </td>
-<td class="cellrowborder" valign="top" width="65%" headers="mcps1.2.3.1.2 "><p id="p49892401260"><a name="p49892401260"></a><a name="p49892401260"></a>创建缓存实例，该接口创建的缓存实例支持按需计费和包周期两种方式。</p>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.2.3.1.2 "><p id="p139920395510"><a name="p139920395510"></a><a name="p139920395510"></a>创建缓存实例，该接口创建的缓存实例支持按需计费和包周期两种方式。</p>
 </td>
 </tr>
 <tr id="row1187211423510"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.2.3.1.1 "><p id="p168729428512"><a name="p168729428512"></a><a name="p168729428512"></a><a href="查询指定实例.md">查询指定实例</a></p>

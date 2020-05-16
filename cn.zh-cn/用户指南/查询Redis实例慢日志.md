@@ -2,6 +2,8 @@
 
 慢日志是Redis用于记录命令执行时间过长请求的机制。您可以在DCS控制台查看慢请求日志，帮助解决性能问题。
 
+查询结果中，涉及的慢语句命令详情，请前往[Redis官方网站](https://redis.io/commands)（中文网站为：[http://www.redis.cn/commands.html](http://www.redis.cn/commands.html)）查看。
+
 慢日志查询结果由实例两个配置参数决定，如下：
 
 -   slowlog-log-slower-than：如果在Redis实例的数据节点中执行一个命令，执行时间超过了slowlog-log-slower-than参数设置的阈值（单位为微秒），则会被记录到慢日志中。该参数的默认值为10000，即10ms，当Redis命令执行时间超过10ms，则生成慢日志。
@@ -25,7 +27,10 @@
 5.  单击“慢日志”页签。
 6.  设置查询时间，查看慢日志记录。
 
-    **图 1**  实例慢日志记录<a name="fig158905102357"></a>  
+    >![](public_sys-resources/icon-note.gif) **说明：**   
+    >如果您想了解返回查询结果中慢语句命令详情，请前往[Redis官方网站](https://redis.io/commands)（中文网站为：[http://www.redis.cn/commands.html](http://www.redis.cn/commands.html)）查看。  
+
+    **图 1**  实例慢日志记录<a name="fig140663223816"></a>  
     ![](figures/实例慢日志记录.png "实例慢日志记录")
 
 

@@ -2,7 +2,7 @@
 
 介绍使用同一VPC内弹性云服务器ECS上的Redis-Cli连接Redis实例的方法。更多的客户端的使用方法，请参考[https://redis.io/clients](https://redis.io/clients)
 
-如果是公网访问Redis实例，请参考[公网连接](公网连接.md)。
+如果是公网访问Redis实例，请参考[步骤三：连接Redis实例（Windows版）](步骤三-连接Redis实例（Windows版）.md)。
 
 >![](public_sys-resources/icon-note.gif) **说明：**   
 >Redis3.0不支持定义端口，端口固定为6379，Redis4.0和Redis5.0支持定义端口，如果不自定义端口，则使用默认端口6379。本文操作步骤涉及实例端口时，统一以默认端口6379为例，如果已自定义端口，请根据实际情况替换。  

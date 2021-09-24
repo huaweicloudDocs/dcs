@@ -34,7 +34,7 @@
 <td class="cellrowborder" valign="top" width="65%" headers="mcps1.2.3.1.2 "><p id="p113594816567"><a name="p113594816567"></a><a name="p113594816567"></a>包括备份实例、恢复实例、查看备份信息和恢复记录等接口</p>
 </td>
 </tr>
-<tr id="row19848548175416"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.2.3.1.1 "><p id="p198491448175415"><a name="p198491448175415"></a><a name="p198491448175415"></a><a href="标签管理.md">标签管理</a></p>
+<tr id="row19848548175416"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.2.3.1.1 "><p id="p198491448175415"><a name="p198491448175415"></a><a name="p198491448175415"></a><a href="zh-cn_topic_0186337243.md">标签管理</a></p>
 </td>
 <td class="cellrowborder" valign="top" width="65%" headers="mcps1.2.3.1.2 "><p id="p7850448125419"><a name="p7850448125419"></a><a name="p7850448125419"></a>用户管理实例标签的接口，包括为实例添加标签、删除标签、查询标签以及查询租户所有标签。</p>
 </td>

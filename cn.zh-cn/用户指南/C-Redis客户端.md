@@ -1,18 +1,18 @@
 # C\# Redis客户端<a name="ZH-CN_TOPIC_0148195355"></a>
 
-介绍使用同一VPC内弹性云服务器ECS上的C\# Redis客户端连接Redis实例的方法。更多的客户端的使用方法，请参考[https://redis.io/clients](https://redis.io/clients)
+介绍使用同一VPC内弹性云服务器ECS上的C\# Redis客户端连接Redis实例的方法。更多的客户端的使用方法请参考[Redis客户端](https://redis.io/clients)。
 
 ## 前提条件<a name="section1502270695932"></a>
 
 -   已成功申请Redis实例，且状态为“运行中”。
--   已创建弹性云服务器，创建弹性云服务器的方法，请参见《弹性云服务器用户指南》。
+-   已创建弹性云服务器，创建弹性云服务器的方法，请参见[创建弹性云服务器](https://support.huaweicloud.com/qs-ecs/ecs_02_0005.html)  。
 -   如果弹性云服务器为Linux系统，该弹性云服务器必须已经安装gcc编译环境。
 
 ## 操作步骤<a name="section994505645015"></a>
 
 1.  <a name="li457118182512"></a>查看并获取待连接Redis实例的IP地址/域名和端口。
 
-    具体步骤请参见[查看缓存实例信息](查看缓存实例信息.md)。
+    具体步骤请参见[查看实例信息](查看实例信息.md)。
 
 2.  登录弹性云服务器。
 
@@ -84,7 +84,7 @@
     Hello, DCS for Redis!
     ```
 
-    关于客户端的其他命令，可以参考官网：[https://stackexchange.github.io/StackExchange.Redis/](https://stackexchange.github.io/StackExchange.Redis/)。
+    关于客户端的其他命令，可以参考[StackExchange.Redis](https://stackexchange.github.io/StackExchange.Redis/)。
 
 
 ## 连接Redis实例操作视频<a name="section107022112212"></a>

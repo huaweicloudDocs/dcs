@@ -9,8 +9,8 @@
 
 具体创建步骤请参见：[创建自定义策略](https://support.huaweicloud.com/usermanual-iam/iam_01_0605.html)。本章为您介绍常用的DCS自定义策略样例。
 
->![](public_sys-resources/icon-note.gif) **说明：**   
->由于缓存的存在，对用户、用户组以及企业项目授予OBS相关的细粒度策略后，大概需要等待5分钟细粒度策略才能生效。  
+>![](public_sys-resources/icon-note.gif) **说明：** 
+>由于缓存的存在，对用户、用户组以及企业项目授予OBS相关的细粒度策略后，大概需要等待5分钟细粒度策略才能生效。
 
 ## DCS自定义策略样例<a name="section207947385117"></a>
 

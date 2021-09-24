@@ -7,10 +7,10 @@
 -   已成功申请Memcached实例，且状态为“运行中”。
 -   已创建弹性云服务器。创建弹性云服务器的方法，请参见《弹性云服务器用户指南》。
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >您创建的弹性云服务器必须与Memcached实例属于同一个VPC，并配置相同的安全组，以确保弹性云服务器与缓存实例的网络是连通的。  
-    >如果弹性云服务器与Memcached实例不在相同VPC中，可以通过建立VPC对等连接方式连通网络，具体请参考常见问题：[缓存实例是否支持跨VPC访问？](https://support.huaweicloud.com/dcs_faq/dcs-zh-ug-180521003.html#section1)  
-    >如果弹性云服务器与Memcached实例配置了不同的安全组，可以通过设置安全组规则连通网络，具体请参考常见问题：[如何选择和配置安全组？](https://support.huaweicloud.com/dcs_faq/zh-cn_topic_0082442607.html)  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >您创建的弹性云服务器必须与Memcached实例属于同一个VPC，并配置相同的安全组，以确保弹性云服务器与缓存实例的网络是连通的。
+    >如果弹性云服务器与Memcached实例不在相同VPC中，可以通过建立VPC对等连接方式连通网络，具体请参考常见问题：[缓存实例是否支持跨VPC访问？](https://support.huaweicloud.com/dcs_faq/dcs-faq-0427002.html)
+    >如果弹性云服务器与Memcached实例配置了不同的安全组，可以通过设置安全组规则连通网络，具体请参考常见问题：[如何选择和配置安全组？](https://support.huaweicloud.com/dcs_faq/dcs-faq-0713002.html)
 
 
 ## **RedHat系列**<a name="section1581772318118"></a>
@@ -39,15 +39,15 @@
 
     **make && make install**
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >安装libmemcached之前要完成gcc-c++、sasl相关组件的安装。否则会在编译过程中报错，报错问题解决后请执行make clean之后重新make。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >安装libmemcached之前要完成gcc-c++、sasl相关组件的安装。否则会在编译过程中报错，报错问题解决后请执行make clean之后重新make。
 
 4.  安装php。
 
     **yum install php-devel php-common php-cli**
 
-    >![](public_sys-resources/icon-notice.gif) **须知：**   
-    >php7.x对SASL认证存在兼容问题，建议使用php 5.6版本。如果yum源提供的php不是5.6版本，请自行在网上查找下载源。  
+    >![](public_sys-resources/icon-notice.gif) **须知：** 
+    >php7.x对SASL认证存在兼容问题，建议使用php 5.6版本。如果yum源提供的php不是5.6版本，请自行在网上查找下载源。
 
 5.  安装memcached客户端。
 
@@ -141,10 +141,10 @@
     Copyright (c) 1997-2016 The PHP Group
     ```
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >如果需要卸载php，可使用如下命令：  
-    >**apt install aptitude -y**  
-    >**aptitude purge \`dpkg -l | grep php| awk '\{print $2\}' |tr "\\n" " "\`**  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >如果需要卸载php，可使用如下命令：
+    >**apt install aptitude -y**
+    >**aptitude purge \`dpkg -l | grep php| awk '\{print $2\}' |tr "\\n" " "\`**
 
 3.  安装sasl组件。
 
@@ -162,8 +162,8 @@
 
     **make && make install**
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >安装libmemcached之前要完成gcc、sasl相关组件的安装。否则会在编译过程中报错，报错问题解决后请执行make clean之后重新make。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >安装libmemcached之前要完成gcc、sasl相关组件的安装。否则会在编译过程中报错，报错问题解决后请执行make clean之后重新make。
 
 5.  安装memcached客户端。
 

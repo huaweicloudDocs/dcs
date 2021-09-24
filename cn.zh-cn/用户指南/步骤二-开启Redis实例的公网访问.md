@@ -4,18 +4,18 @@
 
 如果实例没有开启公网访问，可参考本章节，开启公网访问开关，在开启公网访问时，您可以选择是否使用SSL加密传输。
 
->![](public_sys-resources/icon-note.gif) **说明：**   
->-   通过公网SSL加密方式访问Redis实例时，建议使用前先下载CA证书，并使用CA证书来验证DCS缓存实例的证书，以提高安全性。  
->-   通过公网直接（未开启SSL加密）访问实例时，请直接访问Redis实例的弹性公网IP与6379端口，不需下载证书，也不需要在客户端安装Stunnel工具。  
->-   推荐使用SSL加密Redis客户端与DCS实例之间的传输通道，确保数据传输安全。  
+>![](public_sys-resources/icon-note.gif) **说明：** 
+>-   通过公网SSL加密方式访问Redis实例时，建议使用前先下载CA证书，并使用CA证书来验证DCS缓存实例的证书，以提高安全性。
+>-   通过公网直接（未开启SSL加密）访问实例时，请直接访问Redis实例的弹性公网IP与6379端口，不需下载证书，也不需要在客户端安装Stunnel工具。
+>-   推荐使用SSL加密Redis客户端与DCS实例之间的传输通道，确保数据传输安全。
 
 ## 操作步骤<a name="section194222417283"></a>
 
 1.  登录[分布式缓存服务管理控制台](https://console.huaweicloud.com/dcs)。
 2.  在管理控制台左上角单击![](figures/icon-region.png)，选择区域和项目。
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >此处请选择与您的应用服务相同的区域。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >此处请选择与您的应用服务相同的区域。
 
 3.  单击左侧菜单栏的“缓存管理”。
 4.  单击对应Redis实例的名称，进入该实例的基本信息页面。

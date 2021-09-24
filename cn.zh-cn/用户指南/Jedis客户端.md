@@ -1,25 +1,28 @@
 # Jedis客户端<a name="ZH-CN_TOPIC_0148195198"></a>
 
-介绍使用同一VPC内弹性云服务器ECS上的Jedis连接Redis实例的方法。更多的客户端的使用方法，请参考[https://redis.io/clients](https://redis.io/clients)
+介绍使用同一VPC内弹性云服务器ECS上的Jedis连接Redis实例的方法。更多的客户端的使用方法请参考[Redis客户端](https://redis.io/clients)。
+
+>![](public_sys-resources/icon-note.gif) **说明：** 
+>本章节操作，仅适用于连接单机、主备、Proxy集群实例。Jedis对于Redis Cluster的支持是基于JedisCluster类，详细说明请参见[JedisCluster简介](https://javadoc.io/doc/redis.clients/jedis/2.9.0/redis/clients/jedis/JedisCluster.html)。如果是使用Jedis客户端连接Cluster集群请参考[Redis官网](https://github.com/redis/jedis/wiki)。
 
 ## 前提条件<a name="section1502270695932"></a>
 
 -   已成功申请Redis实例，且状态为“运行中”。
--   已创建弹性云服务器，创建弹性云服务器的方法，请参见《弹性云服务器用户指南》。
+-   已创建弹性云服务器，创建弹性云服务器的方法，请参见[创建弹性云服务器](https://support.huaweicloud.com/qs-ecs/ecs_02_0005.html)。
 -   如果弹性云服务器为Linux系统，该弹性云服务器必须已经安装gcc编译环境。
 
 ## 操作步骤<a name="section1336235611596"></a>
 
 1.  <a name="li695671074019"></a>查看并获取待连接Redis实例的IP地址/域名和端口。
 
-    具体步骤请参见[查看缓存实例信息](查看缓存实例信息.md)。
+    具体步骤请参见[查看实例信息](查看实例信息.md)。
 
 2.  登录弹性云服务器。
-3.  使用Redis Java \(Jedis\)客户端连接Redis实例。
-    1.  获取Redis Java \(Jedis\)客户端源码，具体方法可参考[https://github.com/xetorthio/jedis](https://github.com/xetorthio/jedis)。
+3.  使用Redis Java \(Jedis\)客户端连接Redis单机/主备/Proxy集群实例。
+    1.  获取Redis Java \(Jedis\)客户端源码，具体方法可参考[获取Jedis源码](https://github.com/xetorthio/jedis)。
     2.  编写如下操作代码。
 
-        Jedis 客户端访问DCS Redis服务，有以下两种方法：
+        Jedis客户端访问DCS Redis服务，有以下两种方法：
 
         -   Jedis单连接
         -   Jedis连接池连接
@@ -36,9 +39,11 @@
               
              Jedis client = new Jedis(host, port); 
              client.auth(pwd);
-             client.connect(); // 执行set指令
+             client.connect(); 
+            // 执行set指令
              String result = client.set("key-string", "Hello, Redis!"); 
-             System.out.println( String.format("set指令执行结果:%s", result) ); // 执行get指令
+             System.out.println( String.format("set指令执行结果:%s", result) );
+             // 执行get指令
              String value = client.get("key-string"); 
              System.out.println( String.format("get指令执行结果:%s", value) );
             
@@ -47,9 +52,11 @@
              int port = 6379; 
               
              Jedis client = new Jedis(host, port); 
-             client.connect(); // 执行set指令
+             client.connect(); 
+            // 执行set指令
              String result = client.set("key-string", "Hello, Redis!"); 
-             System.out.println( String.format("set指令执行结果:%s", result) ); // 执行get指令
+             System.out.println( String.format("set指令执行结果:%s", result) ); 
+            // 执行get指令
              String value = client.get("key-string"); 
              System.out.println( String.format("get指令执行结果:%s", value) );
             ```
